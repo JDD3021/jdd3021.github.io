@@ -1,0 +1,9 @@
+The "Download CV" button on the site links to:
+
+    assets/cv/Ededa-Bleoussi-CV.pdf
+
+Add your real CV PDF in this folder with exactly that file name
+(Ededa-Bleoussi-CV.pdf) and the download button will work automatically.
+No code changes are needed.
+
+You can delete this text file once the PDF is in place.
