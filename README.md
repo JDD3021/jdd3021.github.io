@@ -1,9 +1,9 @@
 # jdd3021.github.io
 
-Personal CV / resume website for **Edéda Bleoussi** — Software Engineer | Data & AI.
+Personal CV / resume website for **Edéda Bleoussi** - Software Engineer | Data & AI.
 Live at: https://jdd3021.github.io/
 
-100% static (plain HTML, CSS, and vanilla JS) — no build step, no framework, no backend.
+100% static (plain HTML, CSS, and vanilla JS) - no build step, no framework, no backend.
 Works out of the box with GitHub Pages.
 
 ## Structure
@@ -21,7 +21,7 @@ assets/cv/            put your downloadable CV PDF here (see below)
 
 The "Download CV" button links to `assets/cv/Ededa-Bleoussi-CV.pdf`.
 Drop your real CV PDF in `assets/cv/` with exactly that file name and the
-button will work — no code changes needed. See
+button will work - no code changes needed. See
 `assets/cv/PUT-YOUR-CV-HERE.txt` for details.
 
 ## Local preview
@@ -43,4 +43,4 @@ git push
 
 Then, on GitHub: **Settings → Pages → Source: Deploy from a branch → main / (root)**.
 Since this repo is named `jdd3021.github.io`, GitHub Pages serves it at the
-domain root automatically — no extra configuration needed.
+domain root automatically - no extra configuration needed.

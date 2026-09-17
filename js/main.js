@@ -85,7 +85,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (e) {
-      /* localStorage unavailable — ignore */
+      /* localStorage unavailable - ignore */
     }
   }
 
@@ -99,7 +99,7 @@
   try {
     savedLang = localStorage.getItem(STORAGE_KEY);
   } catch (e) {
-    /* localStorage unavailable — ignore */
+    /* localStorage unavailable - ignore */
   }
   if (savedLang === "fr") {
     applyLang("fr");
