@@ -11,6 +11,18 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
+  // Profile photo: reveal the real image only once it has actually loaded,
+  // otherwise keep showing the monogram placeholder underneath it.
+  document.querySelectorAll("[data-photo-fallback] img").forEach(function (img) {
+    if (img.complete && img.naturalWidth > 0) {
+      img.classList.add("is-loaded");
+      return;
+    }
+    img.addEventListener("load", function () {
+      img.classList.add("is-loaded");
+    });
+  });
+
   // Sticky header shadow on scroll
   function onScroll() {
     if (window.scrollY > 8) {

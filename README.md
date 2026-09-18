@@ -15,6 +15,7 @@ js/main.js            nav, scroll reveal, EN/FR toggle logic
 js/i18n.js            EN/FR text dictionary
 assets/favicon.svg    site favicon (EB monogram)
 assets/cv/            put your downloadable CV PDF here (see below)
+assets/img/           put your profile photo here (see below)
 ```
 
 ## Adding your CV PDF
@@ -23,6 +24,20 @@ The "Download CV" button links to `assets/cv/Ededa-Bleoussi-CV.pdf`.
 Drop your real CV PDF in `assets/cv/` with exactly that file name and the
 button will work - no code changes needed. See
 `assets/cv/PUT-YOUR-CV-HERE.txt` for details.
+
+## Adding your profile photo
+
+The hero section looks for a photo at `assets/img/profile.jpg`. Until that
+file exists, an "EB" monogram placeholder is shown automatically. Drop a
+photo there with exactly that file name (a square photo, ideally at least
+400x400px) and it will replace the placeholder - no code changes needed.
+
+## Updating the site later
+
+If you make changes and the live site still shows the old version after a
+few minutes, it's almost always a browser cache issue, not a bad deploy.
+Do a hard refresh (Ctrl+Shift+R) or bump the `?v=` query string on the
+`css/style.css`, `js/i18n.js`, and `js/main.js` tags in `index.html`.
 
 ## Local preview
 
