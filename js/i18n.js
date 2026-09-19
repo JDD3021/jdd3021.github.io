@@ -45,8 +45,28 @@ window.I18N = {
   "exp.mixx.role": { en: "Data Analysis Intern", fr: "Stagiaire en Analyse de Données" },
   "exp.mixx.place": { en: "Lomé, Togo", fr: "Lomé, Togo" },
   "exp.mixx.body": {
-    en: "Supporting business and finance teams with reliable, up-to-date insight from operational data. I clean and analyze data in Excel, extract and query information directly from PostgreSQL databases, and work closely with accounting teams to turn raw records into analyses that inform day-to-day decisions.",
-    fr: "J'accompagne les équipes métier et comptables dans l'exploitation de données fiables et à jour. Je nettoie et analyse des données sous Excel, j'extrais et interroge directement des bases PostgreSQL, et je travaille en étroite collaboration avec les équipes comptables pour transformer des données brutes en analyses utiles aux décisions du quotidien."
+    en: "Financial data analysis and reconciliation on partner accounts of a mobile payment operator, supporting business and accounting teams with reliable, up-to-date figures.",
+    fr: "Analyse et rapprochement de données financières sur les comptes partenaires d'un opérateur de paiement mobile, pour fournir aux équipes métier et comptables des chiffres fiables et à jour."
+  },
+  "exp.mixx.p1": {
+    en: "Cleaned and validated financial files of 1,000+ rows: removed duplicates, fixed date formats, checked consistency. On one file, 170 duplicates were removed and 19 months of unexplained gaps were brought back to zero.",
+    fr: "Nettoyage et fiabilisation de fichiers financiers de plus de 1 000 lignes : suppression de doublons, correction des formats de dates, contrôle de cohérence. Sur un dossier, 170 doublons ont été retirés et 19 mois d'écarts inexpliqués sont revenus à zéro."
+  },
+  "exp.mixx.p2": {
+    en: "Ran periodic reconciliations across three sources (validated data, bank payouts, operations), calculating gaps and documenting each one in writing.",
+    fr: "Rapprochement périodique de trois sources (données validées, reversements bancaires, opérations), avec calcul des écarts et justification écrite."
+  },
+  "exp.mixx.p3": {
+    en: "Extracted structured data from free-text comments: start and end dates, YYYY-MM period, normalized partner names.",
+    fr: "Extraction structurée à partir de commentaires libres : dates de début et de fin, période AAAA-MM, normalisation des noms de partenaires."
+  },
+  "exp.mixx.p4": {
+    en: "Built Excel control and summary tools (SUMIFS, check formulas, summary tabs).",
+    fr: "Conception d'outils de contrôle et de synthèse sous Excel (SUMIFS, formules de contrôle, onglets de synthèse)."
+  },
+  "exp.mixx.p5": {
+    en: "Read and analyzed complex PostgreSQL queries (CTEs, window functions) and designed a Python script that runs a query automatically for each 3-month period, with a secured transaction and a dry-run mode.",
+    fr: "Lecture et compréhension de requêtes PostgreSQL complexes (CTE, fonctions de fenêtre) et conception d'un script Python qui exécute automatiquement une requête par période de 3 mois, avec transaction sécurisée et mode simulation."
   },
 
   "exp.menumap.date": { en: "Startup Project", fr: "Projet startup" },
@@ -82,10 +102,32 @@ window.I18N = {
     fr: "Un prototype d'aide au dépistage des sons cardiaques assisté par IA. CardioBeat classe les sons cardiaques en « Normal » ou « Anormal » à l'aide de deep learning (CNN-BiLSTM / CNN-LSTM) sur des caractéristiques MFCC extraites de jeux de données publics, dans le but de faciliter un dépistage précoce dans des environnements à ressources limitées. Il s'agit d'un prototype d'aide à la décision, et non d'un dispositif de diagnostic."
   },
 
+  "proj.cardiobeat.tag": { en: "Final-year project", fr: "Projet de soutenance" },
+  "proj.cardiobeat.p1": {
+    en: "Model results: 87.7% accuracy and 89.2% sensitivity, backed by exploratory analysis, a confusion matrix, and a fix for overfitting.",
+    fr: "Résultats du modèle : 87,7 % d'accuracy et 89,2 % de sensibilité, avec analyse exploratoire, matrice de confusion et correction d'un sur-apprentissage."
+  },
+  "proj.cardiobeat.p2": {
+    en: "Delivered a demo mobile app, a FastAPI service, and a UML analysis document (use case, activity, sequence, and class diagrams).",
+    fr: "Livraison d'une application mobile de démonstration, d'une API FastAPI et d'un cahier d'analyse UML (cas d'utilisation, activité, séquence et classes)."
+  },
+  "proj.cardiobeat.p3": {
+    en: "Wrote the defense thesis and a 20-slide presentation, and ran a Google Forms survey with branching logic among healthcare professionals.",
+    fr: "Rédaction du mémoire de soutenance et d'un diaporama de 20 slides, et enquête par questionnaire Google Forms à logique de branchement auprès de professionnels de santé."
+  },
+
   "proj.jabarie.award": { en: "3rd Prize - JPOPE 2026", fr: "3e Prix - JPOPE 2026" },
   "proj.jabarie.desc": {
-    en: "An Afro-futuristic 3D action-adventure game built in Unity. Players follow Eunice through a story centered on the Sphere of Awakening and the Echoes of Memory, set in a futuristic African world.",
-    fr: "Un jeu vidéo 3D action-aventure afro-futuriste développé sous Unity. Les joueurs suivent Eunice dans une histoire centrée sur la Sphère de l'Éveil et les Échos de la mémoire, dans un univers africain futuriste."
+    en: "An Afro-futuristic 3D action-adventure game built in Unity by a team of two. Players follow Eunice through a story centered on the Sphere of Awakening and the Echoes of Memory, set in a futuristic African world.",
+    fr: "Un jeu vidéo 3D action-aventure afro-futuriste développé sous Unity par une équipe de deux. Les joueurs suivent Eunice dans une histoire centrée sur la Sphère de l'Éveil et les Échos de la mémoire, dans un univers africain futuriste."
+  },
+  "proj.jabarie.p1": {
+    en: "Wrote the game design document (GDD), the script and the pitch, and tracked a backlog of about 150 tasks.",
+    fr: "Rédaction du document de conception (GDD), du scénario et du pitch, et pilotage d'une liste d'environ 150 tâches."
+  },
+  "proj.jabarie.p2": {
+    en: "Prepared the business plan, a hardware partnership with Matrix Industrie, the poster, and the pitch delivered to the jury.",
+    fr: "Élaboration du business plan, d'un partenariat matériel avec Matrix Industrie, du poster et du pitch présenté devant le jury."
   },
 
   "proj.ivan.award": { en: "1st Prize - IDS Contest", fr: "1er Prix - IDS Contest" },
@@ -103,11 +145,35 @@ window.I18N = {
     en: "A broad technical base, sharpening toward Data & AI.",
     fr: "Une base technique large, qui s'affine vers la Data & l'IA."
   },
-  "skills.se": { en: "Software Engineering", fr: "Génie Logiciel" },
-  "skills.backend": { en: "Backend", fr: "Backend" },
-  "skills.frontend": { en: "Frontend & Mobile", fr: "Frontend & Mobile" },
-  "skills.ai": { en: "AI & Data", fr: "IA & Data" },
-  "skills.tools": { en: "Tools", fr: "Outils" },
+  "skills.dev": { en: "Software Development", fr: "Développement logiciel" },
+  "skills.dev.oop": { en: "Object-Oriented Programming (OOP)", fr: "Programmation orientée objet (POO)" },
+  "skills.dev.webmobile": { en: "Web & Mobile Application Development", fr: "Développement d'applications Web & Mobile" },
+  "skills.dev.rest": { en: "REST APIs", fr: "API REST" },
+  "skills.dev.arch": { en: "Software Architecture", fr: "Architecture logicielle" },
+  "skills.frameworks": { en: "Frameworks & Technologies", fr: "Frameworks & Technologies" },
+  "skills.frameworks.games": { en: "Video Games", fr: "Jeux vidéo" },
+  "skills.ai": { en: "Data & Artificial Intelligence", fr: "Data & Intelligence Artificielle" },
+  "skills.ai.analysis": { en: "Data Analysis & Processing", fr: "Analyse et traitement de données" },
+  "skills.ai.audio": { en: "Audio Data Processing", fr: "Traitement de données audio" },
+  "skills.ai.mfcc": { en: "MFCC Feature Extraction", fr: "Extraction de caractéristiques MFCC" },
+  "skills.ai.models": { en: "AI Model Design & Integration", fr: "Conception et intégration de modèles IA" },
+  "skills.db": { en: "Databases", fr: "Bases de données" },
+  "skills.db.modeling": { en: "Database Modeling & Manipulation", fr: "Modélisation et manipulation de bases de données" },
+  "skills.tools": { en: "Tools & DevOps", fr: "Outils & DevOps" },
+  "skills.data": { en: "Data & Productivity", fr: "Data & Productivité" },
+  "skills.data.viz": { en: "Data Analysis & Visualization", fr: "Analyse et visualisation de données" },
+  "skills.data.pm": { en: "Project Management Fundamentals", fr: "Notions de gestion de projet" },
+  "skills.other": { en: "Other Domains", fr: "Autres domaines" },
+  "skills.other.sec": { en: "Cybersecurity & Data Protection", fr: "Cybersécurité & protection des données" },
+  "skills.other.digital": { en: "Digital Transformation", fr: "Transformation digitale" },
+  "skills.other.sysarch": { en: "Systems Architecture", fr: "Architecture des systèmes" },
+  "skills.other.dist": { en: "Distributed Systems", fr: "Systèmes distribués" },
+  "skills.soft": { en: "Professional Skills", fr: "Compétences transversales" },
+  "skills.soft.rigor": { en: "Rigor", fr: "Rigueur" },
+  "skills.soft.autonomy": { en: "Autonomy", fr: "Autonomie" },
+  "skills.soft.deadlines": { en: "Working to tight deadlines", fr: "Gestion de délais serrés" },
+  "skills.soft.comm": { en: "Communication & public speaking", fr: "Communication et présentation orale" },
+  "skills.soft.writing": { en: "Academic & professional writing", fr: "Rédaction académique et professionnelle" },
 
   "awards.heading": { en: "Recognition along the way.", fr: "Quelques reconnaissances." },
   "awards.ivan.title": { en: "1st Prize - IDS Contest", fr: "1er Prix - IDS Contest" },
@@ -127,6 +193,10 @@ window.I18N = {
     fr: "Licence Professionnelle en Génie Logiciel"
   },
   "education.grad": { en: "Expected graduation: 2026", fr: "Diplôme prévu : 2026" },
+  "education.thesis": {
+    en: "Final-year project: CardioBeat, an AI-assisted cardiac sound screening prototype (thesis and defense).",
+    fr: "Projet de soutenance : CardioBeat, un prototype d'aide au dépistage des sons cardiaques assisté par IA (mémoire et soutenance)."
+  },
 
   "contact.heading": { en: "Let's build something.", fr: "Construisons quelque chose." },
   "contact.body": {
