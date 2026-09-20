@@ -716,8 +716,20 @@ button { font-family: inherit; cursor: pointer; }
 .project-desc {
   color: var(--color-text-muted);
   font-size: 15px;
-  flex: 1;
 }
+.project-card .tag-list { margin-top: auto; }
+.project-card-wide { grid-column: 1 / -1; }
+.project-link,
+.inline-link {
+  color: var(--color-accent-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-line);
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--transition);
+}
+.project-link { align-self: flex-start; font-size: 14px; }
+.project-link:hover, .inline-link:hover { text-decoration-color: var(--color-accent-text); }
 
 /* ==========================================================================
    Skills
@@ -793,8 +805,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 .award-card h3 {
   font-size: 1.1rem;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
+.award-card .timeline-org { margin-bottom: 10px; }
 .award-card p {
   color: var(--color-text-muted);
   font-size: 14.5px;
@@ -816,6 +829,15 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 14.5px;
 }
 .education-card .timeline-org { margin-bottom: 10px; }
+.education-card .point-list { margin-bottom: 0; }
+.education-card .point-list li { font-size: 14.5px; }
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.education-grid .education-card { max-width: none; }
+.education-card p + p { margin-top: 8px; }
 
 /* ==========================================================================
    Contact
@@ -987,6 +1009,7 @@ body.lightbox-open { overflow: hidden; }
 
 @media (min-width: 1301px) {
   .main-nav { display: block; }
+  .main-nav .nav-num { display: none; }
 }
 
 /* ==========================================================================
@@ -999,6 +1022,7 @@ body.lightbox-open { overflow: hidden; }
   .project-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .awards-grid { grid-template-columns: 1fr; }
+  .education-grid { grid-template-columns: 1fr; }
   .timeline-item { grid-template-columns: 1fr; gap: 12px; padding: 24px; }
   .hero-inner { flex-direction: column-reverse; gap: 32px; text-align: center; }
   .hero-meta, .hero-cta { justify-content: center; }
@@ -1082,7 +1106,7 @@ body.lightbox-open { overflow: hidden; }
     page-break-inside: avoid;
   }
   .about-photo img, .profile-photo { box-shadow: none; }
-  .project-grid, .awards-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-grid, .awards-grid, .education-grid { grid-template-columns: repeat(2, 1fr); }
   .skills-grid { grid-template-columns: repeat(3, 1fr); }
   a { color: #111; text-decoration: underline; }
   .btn, .contact-link { border: 1px solid #999; }

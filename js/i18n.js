@@ -3,13 +3,17 @@
 window.I18N = {
   "nav.about": { en: "About", fr: "À propos" },
   "nav.experience": { en: "Experience", fr: "Expérience" },
+  "nav.community": { en: "Community", fr: "Communauté" },
   "nav.projects": { en: "Selected Projects", fr: "Projets" },
   "nav.skills": { en: "Skills", fr: "Compétences" },
   "nav.awards": { en: "Awards", fr: "Distinctions" },
   "nav.education": { en: "Education", fr: "Formation" },
   "nav.contact": { en: "Contact", fr: "Contact" },
 
-  "hero.eyebrow": { en: "Software Engineer · Data & AI", fr: "Ingénieure Logicielle · Data & IA" },
+  "hero.eyebrow": {
+    en: "Software Engineer · Data & AI · Responsible Digital",
+    fr: "Ingénieure Logicielle · Data & IA · Numérique responsable"
+  },
   "hero.statement": {
     en: "Software, data, and AI - built end-to-end, from problem to product.",
     fr: "Logiciel, data et IA - pensés de bout en bout, du problème au produit."
@@ -27,12 +31,12 @@ window.I18N = {
     fr: "Une ingénieure logicielle qui approfondit la data & l'IA."
   },
   "about.p1": {
-    en: "I'm a software engineer trained to take a problem all the way from idea to working solution - analysis, development, and deployment. My focus is shifting increasingly toward data and artificial intelligence, where I'm drawn to systems that turn raw information into something people can act on.",
-    fr: "Je suis ingénieure logicielle de formation, capable de porter un problème de l'idée jusqu'à une solution fonctionnelle : analyse, développement et déploiement. Mon intérêt se porte de plus en plus vers la data et l'intelligence artificielle, où j'aime particulièrement les systèmes qui transforment des données brutes en informations exploitables."
+    en: "I'm a third-year software engineering student with an initial background in mathematics, progressively specializing in artificial intelligence, data analysis, and software development. I design data-driven digital solutions that combine technical rigor, critical thinking, and social impact.",
+    fr: "Je suis étudiante en troisième année de licence en génie logiciel, avec une formation initiale en mathématiques et une spécialisation progressive en intelligence artificielle, analyse de données et développement logiciel. Je conçois des solutions numériques centrées sur les données, alliant rigueur technique, pensée critique et impact social."
   },
   "about.p2": {
-    en: "Across my internships and projects, I've worked through the full stack: cleaning and analyzing data, building APIs, integrating machine learning models, and designing interfaces for web and mobile. I'm especially interested in software engineering, data & AI, and building technology responsibly - with privacy, security, and real-world impact in mind.",
-    fr: "Au fil de mes stages et projets, j'ai travaillé sur l'ensemble de la chaîne technique : nettoyage et analyse de données, développement d'API, intégration de modèles de machine learning, et conception d'interfaces web et mobile. Je m'intéresse particulièrement au génie logiciel, à la data & l'IA, ainsi qu'à une technologie construite de façon responsable, en tenant compte de la confidentialité, de la sécurité et de l'impact réel."
+    en: "Across my internships and projects, I've worked through the full stack: cleaning and analyzing data, building APIs, integrating machine learning models, and designing interfaces for web and mobile. I'm particularly interested in digital security, gender, and responsible technology in Africa - and I'm equally at ease on the technical and communication sides, with active involvement in student leadership, tech popularization, and data storytelling.",
+    fr: "Au fil de mes stages et projets, j'ai travaillé sur l'ensemble de la chaîne technique : nettoyage et analyse de données, développement d'API, intégration de modèles de machine learning, et conception d'interfaces web et mobile. J'ai un intérêt particulier pour la sécurité numérique, le genre et les technologies responsables en Afrique, et je suis à l'aise aussi bien sur les aspects techniques que communicationnels, avec un engagement actif dans le leadership étudiant, la vulgarisation technologique et le data storytelling."
   },
   "about.p3": {
     en: "I'm currently based in Lomé, Togo, and open to opportunities that let me contribute to teams solving problems that matter - in Togo or internationally.",
@@ -45,51 +49,103 @@ window.I18N = {
   "exp.mixx.role": { en: "Data Analysis Intern", fr: "Stagiaire en Analyse de Données" },
   "exp.mixx.place": { en: "Lomé, Togo", fr: "Lomé, Togo" },
   "exp.mixx.body": {
-    en: "Financial data analysis and reconciliation on partner accounts of a mobile payment operator, supporting business and accounting teams with reliable, up-to-date figures.",
-    fr: "Analyse et rapprochement de données financières sur les comptes partenaires d'un opérateur de paiement mobile, pour fournir aux équipes métier et comptables des chiffres fiables et à jour."
+    en: "Financial data analysis and reconciliation on the partner accounts of a mobile payment operator.",
+    fr: "Analyse et rapprochement de données financières sur les comptes partenaires d'un opérateur de paiement mobile."
   },
   "exp.mixx.p1": {
-    en: "Cleaned and validated financial files of 1,000+ rows: removed duplicates, fixed date formats, checked consistency. On one file, 170 duplicates were removed and 19 months of unexplained gaps were brought back to zero.",
-    fr: "Nettoyage et fiabilisation de fichiers financiers de plus de 1 000 lignes : suppression de doublons, correction des formats de dates, contrôle de cohérence. Sur un dossier, 170 doublons ont été retirés et 19 mois d'écarts inexpliqués sont revenus à zéro."
+    en: "Cleaned and validated 1,000+ row financial files: duplicates removed, dates fixed, gaps brought back to zero.",
+    fr: "Nettoyage et fiabilisation de fichiers financiers de plus de 1 000 lignes : doublons retirés, dates corrigées, écarts ramenés à zéro."
   },
   "exp.mixx.p2": {
-    en: "Ran periodic reconciliations across three sources (validated data, bank payouts, operations), calculating gaps and documenting each one in writing.",
-    fr: "Rapprochement périodique de trois sources (données validées, reversements bancaires, opérations), avec calcul des écarts et justification écrite."
-  },
-  "exp.mixx.p3": {
-    en: "Extracted structured data from free-text comments: start and end dates, YYYY-MM period, normalized partner names.",
-    fr: "Extraction structurée à partir de commentaires libres : dates de début et de fin, période AAAA-MM, normalisation des noms de partenaires."
-  },
-  "exp.mixx.p4": {
-    en: "Built Excel control and summary tools (SUMIFS, check formulas, summary tabs).",
-    fr: "Conception d'outils de contrôle et de synthèse sous Excel (SUMIFS, formules de contrôle, onglets de synthèse)."
-  },
-  "exp.mixx.p5": {
-    en: "Read and analyzed complex PostgreSQL queries (CTEs, window functions) and designed a Python script that runs a query automatically for each 3-month period, with a secured transaction and a dry-run mode.",
-    fr: "Lecture et compréhension de requêtes PostgreSQL complexes (CTE, fonctions de fenêtre) et conception d'un script Python qui exécute automatiquement une requête par période de 3 mois, avec transaction sécurisée et mode simulation."
+    en: "Ran periodic three-source reconciliations and automated recurring PostgreSQL queries with Python.",
+    fr: "Rapprochements périodiques sur trois sources et automatisation de requêtes PostgreSQL récurrentes avec Python."
   },
 
   "exp.menumap.date": { en: "Startup Project", fr: "Projet startup" },
-  "exp.menumap.role": { en: "CTO - MenuMap", fr: "CTO - MenuMap" },
+  "exp.menumap.role": { en: "CTO", fr: "CTO" },
   "exp.menumap.place": { en: "Startup project", fr: "Projet startup" },
   "exp.menumap.body": {
-    en: "As CTO for MenuMap, a startup project, I led technical direction and hands-on development, taking the product from concept to a working prototype.",
-    fr: "En tant que CTO du projet startup MenuMap, j'ai piloté la direction technique et le développement du produit, de l'idée jusqu'à un prototype fonctionnel."
+    en: "Led the technical direction of MenuMap, a startup project, from concept to a working prototype.",
+    fr: "Direction technique de MenuMap, un projet startup, de l'idée jusqu'à un prototype fonctionnel."
+  },
+  "exp.menumap.p1": {
+    en: "Defined the technical direction of the product.",
+    fr: "Définition de la direction technique du produit."
+  },
+  "exp.menumap.p2": {
+    en: "Developed it hands-on through to a working prototype.",
+    fr: "Développement concret jusqu'à un prototype fonctionnel."
   },
 
-  "exp.ipnet.date": { en: "Student Leadership", fr: "Engagement étudiant" },
-  "exp.ipnet.role": { en: "Vice President - IPNET Developer Club", fr: "Vice-Présidente - IPNET Developer Club" },
-  "exp.ipnet.place": { en: "IPNET Institute of Technology", fr: "IPNET Institute of Technology" },
-  "exp.ipnet.body": {
-    en: "Helped lead a student developer community - coordinating technical activities, supporting peer learning, and driving collaborative projects within the club.",
-    fr: "Co-pilote d'une communauté étudiante de développeurs - coordination d'activités techniques, accompagnement de l'apprentissage entre pairs, et pilotage de projets collaboratifs au sein du club."
+  "exp.thesymo.date": { en: "Aug - Oct 2025", fr: "Août - Oct. 2025" },
+  "exp.thesymo.role": { en: "Software Development Intern", fr: "Stagiaire en Développement Logiciel" },
+  "exp.thesymo.place": { en: "Lomé, Togo", fr: "Lomé, Togo" },
+  "exp.thesymo.body": {
+    en: "Backend and AI work on a content analysis and recommendation product.",
+    fr: "Travail backend et IA sur un produit d'analyse et de recommandation de contenus."
+  },
+  "exp.thesymo.p1": {
+    en: "Designed a content analysis and recommendation API with FastAPI.",
+    fr: "Conception d'une API d'analyse et de recommandation de contenus avec FastAPI."
+  },
+  "exp.thesymo.p2": {
+    en: "Integrated an intelligent chatbot using LangChain and Ollama.",
+    fr: "Intégration d'un chatbot intelligent via LangChain et Ollama."
   },
 
   "exp.thot.date": { en: "Jul - Sep 2024", fr: "Juil. - Sept. 2024" },
   "exp.thot.role": { en: "Software Development Intern", fr: "Stagiaire en Développement Logiciel" },
+  "exp.thot.place": { en: "Lomé, Togo", fr: "Lomé, Togo" },
   "exp.thot.body": {
-    en: "Joined the engineering team as a developer, contributing to real feature work and getting hands-on practice with professional development workflows - from writing and testing code to collaborating within a technical team.",
-    fr: "Intégrée à l'équipe technique en tant que développeuse, j'ai contribué à des fonctionnalités concrètes et me suis familiarisée avec les pratiques professionnelles de développement : écriture et test de code, collaboration au sein d'une équipe technique."
+    en: "Backend developer on the engineering team, working on REST APIs.",
+    fr: "Développeuse backend au sein de l'équipe technique, sur des API REST."
+  },
+  "exp.thot.p1": {
+    en: "Built REST APIs in Node.js, integrated with a PostgreSQL database.",
+    fr: "Développement d'API REST en Node.js, intégrées à une base PostgreSQL."
+  },
+  "exp.thot.p2": {
+    en: "Improved code performance by 30% through refactoring and unit tests.",
+    fr: "Amélioration des performances du code de 30 % via refactoring et tests unitaires."
+  },
+  "exp.thot.p3": {
+    en: "Wrote the technical documentation with Swagger.",
+    fr: "Rédaction de la documentation technique avec Swagger."
+  },
+
+  "vol.heading": {
+    en: "Volunteering in the communities I care about.",
+    fr: "Un engagement bénévole au sein des communautés qui me tiennent à cœur."
+  },
+  "vol.outreach.date": { en: "Student Engagement", fr: "Engagement étudiant" },
+  "vol.outreach.role": { en: "Competitions, Debates & Outreach", fr: "Compétitions, débats et vulgarisation" },
+  "vol.outreach.place": { en: "Student community", fr: "Communauté étudiante" },
+  "vol.outreach.body": {
+    en: "Active in student life beyond the developer club.",
+    fr: "Actif dans la vie étudiante au-delà du club de développeurs."
+  },
+  "vol.outreach.p1": {
+    en: "Took part in academic competitions and debates.",
+    fr: "Participation à des compétitions académiques et à des débats."
+  },
+  "vol.outreach.p2": {
+    en: "Popularized scientific and technical topics among fellow students.",
+    fr: "Vulgarisation scientifique et technique auprès des étudiants."
+  },
+  "vol.ipnet.date": { en: "Student Leadership", fr: "Engagement étudiant" },
+  "vol.ipnet.role": { en: "Vice President", fr: "Vice-Présidente" },
+  "vol.ipnet.place": { en: "IPNET Institute of Technology", fr: "IPNET Institute of Technology" },
+  "vol.ipnet.body": {
+    en: "Co-led a student developer community at IPNET Institute of Technology.",
+    fr: "Co-pilote d'une communauté étudiante de développeurs à l'IPNET Institute of Technology."
+  },
+  "vol.ipnet.p1": {
+    en: "Coordinated the club's technical activities.",
+    fr: "Coordination des activités techniques du club."
+  },
+  "vol.ipnet.p2": {
+    en: "Supported peer learning and drove collaborative projects.",
+    fr: "Accompagnement de l'apprentissage entre pairs et pilotage de projets collaboratifs."
   },
 
   "projects.heading": {
@@ -97,49 +153,78 @@ window.I18N = {
     fr: "Des idées menées jusqu'à des solutions fonctionnelles."
   },
 
+  "proj.cardiobeat.badge": { en: "Final-year project", fr: "Projet de soutenance" },
   "proj.cardiobeat.desc": {
-    en: "An AI-assisted cardiac sound screening prototype. CardioBeat classifies heart sounds as Normal or Abnormal using deep learning (CNN-BiLSTM / CNN-LSTM) on MFCC features extracted from public heart sound datasets, aiming to support early screening in resource-limited settings. It is a decision-support prototype, not a diagnostic device.",
-    fr: "Un prototype d'aide au dépistage des sons cardiaques assisté par IA. CardioBeat classe les sons cardiaques en « Normal » ou « Anormal » à l'aide de deep learning (CNN-BiLSTM / CNN-LSTM) sur des caractéristiques MFCC extraites de jeux de données publics, dans le but de faciliter un dépistage précoce dans des environnements à ressources limitées. Il s'agit d'un prototype d'aide à la décision, et non d'un dispositif de diagnostic."
+    en: "AI-assisted cardiac sound screening prototype that classifies heart sounds as Normal or Abnormal. A decision-support tool, not a diagnostic device.",
+    fr: "Prototype d'aide au dépistage des sons cardiaques par IA, qui classe les sons en « Normal » ou « Anormal ». Un outil d'aide à la décision, et non un dispositif de diagnostic."
   },
-
-  "proj.cardiobeat.tag": { en: "Final-year project", fr: "Projet de soutenance" },
   "proj.cardiobeat.p1": {
-    en: "Model results: 87.7% accuracy and 89.2% sensitivity, backed by exploratory analysis, a confusion matrix, and a fix for overfitting.",
-    fr: "Résultats du modèle : 87,7 % d'accuracy et 89,2 % de sensibilité, avec analyse exploratoire, matrice de confusion et correction d'un sur-apprentissage."
+    en: "Model results: 87.7% accuracy and 89.2% sensitivity.",
+    fr: "Résultats du modèle : 87,7 % d'accuracy et 89,2 % de sensibilité."
   },
   "proj.cardiobeat.p2": {
-    en: "Delivered a demo mobile app, a FastAPI service, and a UML analysis document (use case, activity, sequence, and class diagrams).",
-    fr: "Livraison d'une application mobile de démonstration, d'une API FastAPI et d'un cahier d'analyse UML (cas d'utilisation, activité, séquence et classes)."
-  },
-  "proj.cardiobeat.p3": {
-    en: "Wrote the defense thesis and a 20-slide presentation, and ran a Google Forms survey with branching logic among healthcare professionals.",
-    fr: "Rédaction du mémoire de soutenance et d'un diaporama de 20 slides, et enquête par questionnaire Google Forms à logique de branchement auprès de professionnels de santé."
+    en: "Delivered a demo mobile app, a FastAPI service and a UML analysis document.",
+    fr: "Livraison d'une application mobile de démonstration, d'une API FastAPI et d'un cahier d'analyse UML."
   },
 
-  "proj.jabarie.award": { en: "3rd Prize - JPOPE 2026", fr: "3e Prix - JPOPE 2026" },
+  "proj.jabarie.badge": { en: "3rd Prize - JPOPE 2026", fr: "3e Prix - JPOPE 2026" },
   "proj.jabarie.desc": {
-    en: "An Afro-futuristic 3D action-adventure game built in Unity by a team of two. Players follow Eunice through a story centered on the Sphere of Awakening and the Echoes of Memory, set in a futuristic African world.",
-    fr: "Un jeu vidéo 3D action-aventure afro-futuriste développé sous Unity par une équipe de deux. Les joueurs suivent Eunice dans une histoire centrée sur la Sphère de l'Éveil et les Échos de la mémoire, dans un univers africain futuriste."
+    en: "Afro-futuristic 3D action-adventure game built in Unity by a team of two, set in a futuristic African world.",
+    fr: "Jeu vidéo 3D action-aventure afro-futuriste développé sous Unity par une équipe de deux, dans un univers africain futuriste."
   },
   "proj.jabarie.p1": {
-    en: "Wrote the game design document (GDD), the script and the pitch, and tracked a backlog of about 150 tasks.",
-    fr: "Rédaction du document de conception (GDD), du scénario et du pitch, et pilotage d'une liste d'environ 150 tâches."
+    en: "Wrote the game design document, script and pitch; tracked a backlog of about 150 tasks.",
+    fr: "Rédaction du document de conception, du scénario et du pitch ; suivi d'environ 150 tâches."
   },
   "proj.jabarie.p2": {
-    en: "Prepared the business plan, a hardware partnership with Matrix Industrie, the poster, and the pitch delivered to the jury.",
-    fr: "Élaboration du business plan, d'un partenariat matériel avec Matrix Industrie, du poster et du pitch présenté devant le jury."
+    en: "Prepared the business plan, hardware partnership, poster and jury pitch.",
+    fr: "Élaboration du business plan, du partenariat matériel, du poster et du pitch devant le jury."
   },
 
-  "proj.ivan.award": { en: "1st Prize - IDS Contest", fr: "1er Prix - IDS Contest" },
+  "proj.ivan.badge": { en: "2nd Prize - JPOPE 2024", fr: "2e Prix - JPOPE 2024" },
   "proj.ivan.desc": {
-    en: "An intelligent chatbot built for the IPNET competition, pairing a FastAPI backend with a JavaScript frontend and AI-driven conversation logic.",
-    fr: "Un chatbot intelligent conçu pour le concours IPNET, associant un backend FastAPI, un frontend JavaScript et une logique conversationnelle basée sur l'IA."
+    en: "Multi-platform AI chatbot built with React, FastAPI and CamemBERT (NLP), deployed with Docker and Render.",
+    fr: "Chatbot IA multiplateforme développé avec React, FastAPI et CamemBERT (NLP), déployé via Docker et Render."
+  },
+  "proj.ivan.p1": {
+    en: "Developed with React, FastAPI and CamemBERT for natural language processing.",
+    fr: "Développement avec React, FastAPI et CamemBERT pour le traitement du langage naturel."
+  },
+  "proj.ivan.p2": {
+    en: "Deployed with Docker and Render.",
+    fr: "Déploiement via Docker et Render."
+  },
+  "proj.ivan.p3": {
+    en: "Presented at IPNET's Open Days and awarded 2nd prize for most innovative project.",
+    fr: "Présenté aux Journées Portes Ouvertes d'IPNET et primé 2e prix du projet le plus innovant."
   },
 
+  "proj.pharmapp.badge": { en: "2025 - Student project", fr: "2025 - Projet étudiant" },
   "proj.pharmapp.desc": {
-    en: "A web application for pharmacy management, built with Django and PostgreSQL to handle day-to-day pharmaceutical operations.",
-    fr: "Une application web de gestion pharmaceutique, développée avec Django et PostgreSQL pour gérer les opérations quotidiennes d'une pharmacie."
+    en: "Web application for automated pharmacy stock management and tracking, built as a professional student project.",
+    fr: "Application web de gestion et de suivi automatisé des stocks pharmaceutiques, réalisée dans le cadre d'un projet professionnel étudiant."
   },
+  "proj.pharmapp.p1": {
+    en: "Built with Django and PostgreSQL.",
+    fr: "Développée avec Django et PostgreSQL."
+  },
+  "proj.pharmapp.p2": {
+    en: "Sales and customer management alongside stock tracking.",
+    fr: "Gestion des ventes et des clients en plus du suivi des stocks."
+  },
+  "proj.pharmapp.p3": {
+    en: "Financial reports and analytics.",
+    fr: "Rapports et analyses financiers."
+  },
+  "proj.link.github": { en: "View on GitHub", fr: "Voir sur GitHub" },
+
+  "proj.wp.title": { en: "WordPress Projects", fr: "Projets WordPress" },
+  "proj.wp.desc": {
+    en: "Websites built and managed with WordPress.",
+    fr: "Sites web conçus et gérés avec WordPress."
+  },
+  "proj.wp.portfolio": { en: "Portfolio site", fr: "Site portfolio" },
+  "proj.wp.shop": { en: "Online shop (in progress)", fr: "Boutique en ligne (en cours)" },
 
   "skills.heading": {
     en: "A broad technical base, sharpening toward Data & AI.",
@@ -169,22 +254,27 @@ window.I18N = {
   "skills.other.sysarch": { en: "Systems Architecture", fr: "Architecture des systèmes" },
   "skills.other.dist": { en: "Distributed Systems", fr: "Systèmes distribués" },
   "skills.soft": { en: "Professional Skills", fr: "Compétences transversales" },
-  "skills.soft.rigor": { en: "Rigor", fr: "Rigueur" },
+  "skills.soft.rigor": { en: "Organization & rigor", fr: "Organisation et rigueur" },
+  "skills.soft.adapt": { en: "Adaptability & teamwork", fr: "Adaptabilité et esprit d'équipe" },
+  "skills.soft.lead": { en: "Leadership & project management", fr: "Leadership et gestion de projet" },
+  "skills.soft.discretion": { en: "Discretion & professionalism", fr: "Discrétion et professionnalisme" },
   "skills.soft.autonomy": { en: "Autonomy", fr: "Autonomie" },
   "skills.soft.deadlines": { en: "Working to tight deadlines", fr: "Gestion de délais serrés" },
   "skills.soft.comm": { en: "Communication & public speaking", fr: "Communication et présentation orale" },
   "skills.soft.writing": { en: "Academic & professional writing", fr: "Rédaction académique et professionnelle" },
 
   "awards.heading": { en: "Recognition along the way.", fr: "Quelques reconnaissances." },
-  "awards.ivan.title": { en: "1st Prize - IDS Contest", fr: "1er Prix - IDS Contest" },
-  "awards.ivan.desc": {
-    en: "Awarded for IVAN, an intelligent chatbot built with FastAPI, JavaScript, and AI.",
-    fr: "Décerné pour IVAN, un chatbot intelligent développé avec FastAPI, JavaScript et l'IA."
-  },
   "awards.jabarie.title": { en: "3rd Prize - JPOPE 2026", fr: "3e Prix - JPOPE 2026" },
+  "awards.jabarie.meta": { en: "JABARIE · 3D video game", fr: "JABARIE · Jeu vidéo 3D" },
   "awards.jabarie.desc": {
-    en: "Awarded for JABARIE, an Afro-futuristic 3D action-adventure video game built in Unity.",
+    en: "Awarded for JABARIE, an Afro-futuristic 3D action-adventure game built in Unity.",
     fr: "Décerné pour JABARIE, un jeu vidéo 3D action-aventure afro-futuriste développé sous Unity."
+  },
+  "awards.ivan.title": { en: "2nd Prize - JPOPE 2024", fr: "2e Prix - JPOPE 2024" },
+  "awards.ivan.meta": { en: "IVAN · AI chatbot", fr: "IVAN · Chatbot IA" },
+  "awards.ivan.desc": {
+    en: "Second prize for most innovative project at IPNET's Open Days, for IVAN, a multi-platform AI chatbot.",
+    fr: "2e prix du projet le plus innovant aux Journées Portes Ouvertes d'IPNET, pour IVAN, un chatbot IA multiplateforme."
   },
 
   "education.heading": { en: "Foundations.", fr: "Parcours académique." },
@@ -192,7 +282,23 @@ window.I18N = {
     en: "Licence Professionnelle in Software Engineering",
     fr: "Licence Professionnelle en Génie Logiciel"
   },
-  "education.grad": { en: "Expected graduation: 2026", fr: "Diplôme prévu : 2026" },
+  "education.years": {
+    en: "2023 - 2026 · Third year, expected graduation in 2026",
+    fr: "2023 - 2026 · Troisième année, diplôme prévu en 2026"
+  },
+  "education.bac": { en: "Baccalauréat, Series D", fr: "Baccalauréat, Série D" },
+  "education.bac.detail": {
+    en: "2022 - 2023 · With highest honors (Très Bien)",
+    fr: "2022 - 2023 · Mention Très Bien"
+  },
+  "lang.title": { en: "Spoken Languages", fr: "Langues parlées" },
+  "lang.fr": { en: "French - fluent", fr: "Français - courant" },
+  "lang.en": { en: "English - intermediate, improving", fr: "Anglais - niveau intermédiaire, en amélioration" },
+  "lang.mina": { en: "Mina - fluent", fr: "Mina - courant" },
+  "interests.title": { en: "Interests", fr: "Centres d'intérêt" },
+  "interests.music": { en: "Music (bass guitar)", fr: "Musique (guitare basse)" },
+  "interests.dance": { en: "Dance and travel", fr: "Danse et voyages" },
+  "interests.leadership": { en: "Women's leadership and entrepreneurship", fr: "Leadership et entrepreneuriat féminin" },
   "education.thesis": {
     en: "Final-year project: CardioBeat, an AI-assisted cardiac sound screening prototype (thesis and defense).",
     fr: "Projet de soutenance : CardioBeat, un prototype d'aide au dépistage des sons cardiaques assisté par IA (mémoire et soutenance)."
