@@ -156,6 +156,7 @@ window.I18N = {
     fr: "Des idées menées jusqu'à des solutions fonctionnelles."
   },
 
+  "proj.link.live": { en: "View project", fr: "Voir le projet" },
   "proj.cardiobeat.badge": { en: "Final-year project", fr: "Projet de soutenance" },
   "proj.cardiobeat.desc": {
     en: "AI-assisted cardiac sound screening prototype that classifies heart sounds as Normal or Abnormal. A decision-support tool, not a diagnostic device.",
