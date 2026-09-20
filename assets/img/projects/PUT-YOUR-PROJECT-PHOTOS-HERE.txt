@@ -1,0 +1,14 @@
+The project cards on the site look for images at these exact paths:
+
+    assets/img/projects/cardiobeat.jpg
+    assets/img/projects/jabarie.jpg
+    assets/img/projects/ivan.jpg
+    assets/img/projects/pharmapp.jpg
+    assets/img/projects/wordpress.jpg
+
+Add a screenshot or photo for each project with exactly that file name
+and it will appear automatically - a rounded 16:10 photo above the project
+card content. Until a file is added, a placeholder icon is shown instead,
+so there is nothing else to change in the code.
+
+You can delete this text file once the photos are in place.

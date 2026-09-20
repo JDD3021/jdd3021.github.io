@@ -1,0 +1,11 @@
+The award cards on the site look for images at these exact paths:
+
+    assets/img/awards/jabarie.jpg
+    assets/img/awards/ivan.jpg
+
+Add a photo for each award (e.g. from the ceremony, or the project itself)
+with exactly that file name and it will appear automatically above the
+award card content. Until a file is added, a placeholder icon is shown
+instead, so there is nothing else to change in the code.
+
+You can delete this text file once the photos are in place.
