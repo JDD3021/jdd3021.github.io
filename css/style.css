@@ -46,6 +46,9 @@
   --glass-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 40px rgba(155, 100, 175, 0.14);
   --glass-glow: 0 22px 50px rgba(155, 100, 175, 0.22), 0 0 44px rgba(212, 164, 224, 0.3);
 
+  --btn-primary-bg: rgba(212, 164, 224, 0.32);
+  --btn-primary-bg-hover: rgba(212, 164, 224, 0.46);
+
   --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
@@ -98,6 +101,9 @@
   --glass-solid: #2A2035;
   --glass-shadow: inset 0 1px 0 rgba(255, 244, 209, 0.12), 0 18px 40px rgba(0, 0, 0, 0.35);
   --glass-glow: 0 22px 50px rgba(0, 0, 0, 0.4), 0 0 44px rgba(212, 164, 224, 0.14);
+
+  --btn-primary-bg: rgba(212, 164, 224, 0.22);
+  --btn-primary-bg-hover: rgba(212, 164, 224, 0.34);
 
   color-scheme: dark;
 }
@@ -207,6 +213,36 @@ button { font-family: inherit; cursor: pointer; }
   backdrop-filter: var(--glass-blur);
   box-shadow: var(--glass-shadow);
 }
+
+/* ==========================================================================
+   Card media (project / writing / award photos)
+   ========================================================================== */
+.card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--img-border);
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+.card-media img.is-loaded { display: block; }
+.card-media-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
+.card-media-placeholder svg { width: 28px; height: 28px; opacity: 0.55; }
+.award-card .card-media { margin-bottom: 16px; }
 
 /* ==========================================================================
    Header
@@ -554,14 +590,18 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid transparent;
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--violet), var(--butter));
-  color: var(--color-on-accent);
-  box-shadow: 0 10px 30px rgba(212, 164, 224, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  background: var(--btn-primary-bg);
+  color: var(--color-accent-text);
+  border-color: var(--color-accent-line);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  filter: brightness(1.06);
-  box-shadow: 0 14px 40px rgba(212, 164, 224, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  background: var(--btn-primary-bg-hover);
+  border-color: var(--color-accent-text);
+  box-shadow: var(--glass-glow);
 }
 .btn-secondary {
   background: var(--glass-fill-flat);
