@@ -5,10 +5,13 @@ window.I18N = {
   "nav.experience": { en: "Experience", fr: "Expérience" },
   "nav.community": { en: "Community", fr: "Communauté" },
   "nav.projects": { en: "Selected Projects", fr: "Projets" },
+  "nav.writing": { en: "Writing", fr: "Articles" },
   "nav.skills": { en: "Skills", fr: "Compétences" },
   "nav.awards": { en: "Awards", fr: "Distinctions" },
   "nav.education": { en: "Education", fr: "Formation" },
   "nav.contact": { en: "Contact", fr: "Contact" },
+  "nav.journey": { en: "Journey", fr: "Parcours" },
+  "nav.work": { en: "Work", fr: "Réalisations" },
 
   "hero.eyebrow": {
     en: "Software Engineer · Data & AI · Responsible Digital",
@@ -23,8 +26,8 @@ window.I18N = {
     en: "Software Engineering, IPNET Institute of Technology",
     fr: "Génie Logiciel, IPNET Institute of Technology"
   },
-  "hero.cta.work": { en: "View My Work", fr: "Voir mes projets" },
   "hero.cta.cv": { en: "Download CV", fr: "Télécharger mon CV" },
+  "hero.cta.contact": { en: "Contact Me", fr: "Me contacter" },
 
   "about.heading": {
     en: "A software engineer moving deeper into data & AI.",
@@ -225,6 +228,22 @@ window.I18N = {
   },
   "proj.wp.portfolio": { en: "Portfolio site", fr: "Site portfolio" },
   "proj.wp.shop": { en: "Online shop (in progress)", fr: "Boutique en ligne (en cours)" },
+
+  "writing.heading": { en: "Ideas worth writing down.", fr: "Des idées qui méritent d'être écrites." },
+  "writing.intro": {
+    en: "I write on Medium about technology and its human impact. More articles are on the way.",
+    fr: "J'écris sur Medium à propos de la technologie et de son impact humain. D'autres articles arrivent bientôt."
+  },
+  "writing.a1.badge": { en: "Medium · Dec 2025 · In French", fr: "Medium · Déc. 2025 · En français" },
+  "writing.a1.desc": {
+    en: "Young women and online violence: how the personal data collected by digital platforms opens the door to harassment, blackmail and identity theft in Africa, with a focus on Togo, and why women's underrepresentation in tech design matters.",
+    fr: "Les jeunes femmes face aux violences numériques : comment la collecte de données personnelles par les plateformes ouvre la voie au harcèlement, au chantage et à l'usurpation d'identité en Afrique, avec un focus sur le Togo, et pourquoi la sous-représentation des femmes dans la conception technologique compte."
+  },
+  "writing.read": { en: "Read on Medium", fr: "Lire sur Medium" },
+  "writing.all": { en: "All articles on Medium", fr: "Tous les articles sur Medium" },
+  "writing.tag.privacy": { en: "Data privacy", fr: "Données personnelles" },
+  "writing.tag.gender": { en: "Gender", fr: "Genre" },
+  "writing.tag.violence": { en: "Online violence", fr: "Violences numériques" },
 
   "skills.heading": {
     en: "A broad technical base, sharpening toward Data & AI.",

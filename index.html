@@ -39,9 +39,37 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=14">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gold-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF6C4"/>
+      <stop offset="0.3" stop-color="#F7D354"/>
+      <stop offset="0.62" stop-color="#D9A21B"/>
+      <stop offset="1" stop-color="#A9740C"/>
+    </linearGradient>
+    <linearGradient id="gold-b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0C64A"/>
+      <stop offset="1" stop-color="#9A6A0B"/>
+    </linearGradient>
+    <linearGradient id="gold-c" x1="1" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#FFEFA0"/>
+      <stop offset="0.55" stop-color="#E2B12A"/>
+      <stop offset="1" stop-color="#B57F10"/>
+    </linearGradient>
+    <symbol id="icon-medal" viewBox="0 0 24 24">
+      <path d="M6.5 1.5h4L14 9.2l-3.4 1.4z" fill="url(#gold-b)"/>
+      <path d="M17.5 1.5h-4L10 9.2l3.4 1.4z" fill="url(#gold-b)"/>
+      <circle cx="12" cy="15.2" r="6.6" fill="url(#gold-a)" stroke="#9A6A0B" stroke-width="0.5"/>
+      <circle cx="12" cy="15.2" r="4.7" fill="url(#gold-c)" stroke="#B98416" stroke-width="0.35"/>
+      <path d="M12 12.6l.617 1.751 1.856.046-1.473 1.128.528 1.778L12 16.25l-1.528 1.053.528-1.778-1.473-1.128 1.856-.046z" fill="url(#gold-a)" stroke="#9A6A0B" stroke-width="0.25" stroke-linejoin="round"/>
+      <path d="M7.11 12.38A5.65 5.65 0 0 1 9.61 10.08" fill="none" stroke="#fff" stroke-opacity="0.75" stroke-width="0.9" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -50,15 +78,26 @@
     <a href="#top" class="logo" aria-label="Edéda Bleoussi - home">EDÉDA<span>BLEOUSSI</span></a>
 
     <nav class="main-nav" id="main-nav" aria-label="Primary">
-      <ul>
-        <li><a href="#about"><span class="nav-num">01</span> <span data-i18n="nav.about">About</span></a></li>
-        <li><a href="#experience"><span class="nav-num">02</span> <span data-i18n="nav.experience">Experience</span></a></li>
-        <li><a href="#community"><span class="nav-num">03</span> <span data-i18n="nav.community">Community</span></a></li>
-        <li><a href="#projects"><span class="nav-num">04</span> <span data-i18n="nav.projects">Projects</span></a></li>
-        <li><a href="#skills"><span class="nav-num">05</span> <span data-i18n="nav.skills">Skills</span></a></li>
-        <li><a href="#awards"><span class="nav-num">06</span> <span data-i18n="nav.awards">Awards</span></a></li>
-        <li><a href="#education"><span class="nav-num">07</span> <span data-i18n="nav.education">Education</span></a></li>
-        <li><a href="#contact"><span class="nav-num">08</span> <span data-i18n="nav.contact">Contact</span></a></li>
+      <ul class="nav-list">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li class="nav-group">
+          <button type="button" class="nav-group-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="menu-journey"><span data-i18n="nav.journey">Journey</span><svg class="nav-chevron" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="nav-submenu" id="menu-journey">
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#community" data-i18n="nav.community">Community</a></li>
+            <li><a href="#education" data-i18n="nav.education">Education</a></li>
+          </ul>
+        </li>
+        <li class="nav-group">
+          <button type="button" class="nav-group-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="menu-work"><span data-i18n="nav.work">Work</span><svg class="nav-chevron" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="nav-submenu" id="menu-work">
+            <li><a href="#projects" data-i18n="nav.projects">Selected Projects</a></li>
+            <li><a href="#writing" data-i18n="nav.writing">Writing</a></li>
+            <li><a href="#awards" data-i18n="nav.awards">Awards</a></li>
+          </ul>
+        </li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="mobile-social">
         <a href="https://www.linkedin.com/in/ed%C3%A9da-bleoussi/" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
@@ -114,8 +153,8 @@
           <span data-i18n="hero.education">Software Engineering, IPNET Institute of Technology</span>
         </p>
         <div class="hero-cta reveal">
-          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.work">View My Work</a>
-          <a href="assets/cv/Ededa-Bleoussi-CV.pdf" class="btn btn-secondary" download data-i18n="hero.cta.cv">Download CV</a>
+          <a href="assets/cv/Ededa-Bleoussi-CV.pdf" class="btn btn-primary" download data-i18n="hero.cta.cv">Download CV</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta.contact">Contact Me</a>
         </div>
       </div>
       <div class="hero-photo reveal" data-photo-fallback>
@@ -263,10 +302,48 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section class="section section-alt" id="projects">
+  <!-- EDUCATION -->
+  <section class="section section-alt" id="education">
     <div class="container">
-      <p class="section-label reveal">04 - <span data-i18n="nav.projects">Selected Projects</span></p>
+      <p class="section-label reveal">04 - <span data-i18n="nav.education">Education</span></p>
+      <h2 class="section-heading reveal" data-i18n="education.heading">Foundations.</h2>
+
+      <div class="education-grid">
+        <div class="education-card reveal">
+          <h3 data-i18n="education.degree">Licence Professionnelle in Software Engineering</h3>
+          <p class="timeline-org">IPNET Institute of Technology (IIT) · Lomé, Togo</p>
+          <p data-i18n="education.years">2023 - 2026 · Third year, expected graduation in 2026</p>
+          <p data-i18n="education.thesis">Final-year project: CardioBeat, an AI-assisted cardiac sound screening prototype (thesis and defense).</p>
+        </div>
+        <div class="education-card reveal">
+          <h3 data-i18n="education.bac">Baccalauréat, Series D</h3>
+          <p class="timeline-org">Collège Protestant Lomé Agbalepedogan · Lomé, Togo</p>
+          <p data-i18n="education.bac.detail">2022 - 2023 · With highest honors (Très Bien)</p>
+        </div>
+        <div class="education-card reveal">
+          <h3 data-i18n="lang.title">Spoken Languages</h3>
+          <ul class="point-list">
+            <li data-i18n="lang.fr">French - fluent</li>
+            <li data-i18n="lang.en">English - intermediate, improving</li>
+            <li data-i18n="lang.mina">Mina - fluent</li>
+          </ul>
+        </div>
+        <div class="education-card reveal">
+          <h3 data-i18n="interests.title">Interests</h3>
+          <ul class="point-list">
+            <li data-i18n="interests.music">Music (bass guitar)</li>
+            <li data-i18n="interests.dance">Dance and travel</li>
+            <li data-i18n="interests.leadership">Women's leadership and entrepreneurship</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-label reveal">05 - <span data-i18n="nav.projects">Selected Projects</span></p>
       <h2 class="section-heading reveal" data-i18n="projects.heading">Ideas taken through to working software.</h2>
 
       <div class="project-grid">
@@ -291,7 +368,7 @@
           <div class="project-card-head">
             <h3>JABARIE</h3>
             <span class="project-award">
-              <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 15.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0-2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM9 16.7 5.8 22l3.7-.7 1.9 3 2.3-6.9zm6 0-2.7 6.6 2.3-3 3.7.7-3.2-5.3z" fill="currentColor"/></svg>
+              <svg class="icon-gold award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#icon-medal"/></svg>
               <span data-i18n="proj.jabarie.badge">3rd Prize - JPOPE 2026</span>
             </span>
           </div>
@@ -308,7 +385,7 @@
           <div class="project-card-head">
             <h3>IVAN</h3>
             <span class="project-award">
-              <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 15.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0-2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM9 16.7 5.8 22l3.7-.7 1.9 3 2.3-6.9zm6 0-2.7 6.6 2.3-3 3.7.7-3.2-5.3z" fill="currentColor"/></svg>
+              <svg class="icon-gold award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#icon-medal"/></svg>
               <span data-i18n="proj.ivan.badge">2nd Prize - JPOPE 2024</span>
             </span>
           </div>
@@ -362,10 +439,70 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section class="section" id="skills">
+  <!-- WRITING -->
+  <section class="section section-alt" id="writing">
     <div class="container">
-      <p class="section-label reveal">05 - <span data-i18n="nav.skills">Skills</span></p>
+      <p class="section-label reveal">06 - <span data-i18n="nav.writing">Writing</span></p>
+      <h2 class="section-heading reveal" data-i18n="writing.heading">Ideas worth writing down.</h2>
+      <p class="section-intro reveal" data-i18n="writing.intro">I write on Medium about technology and its human impact. More articles are on the way.</p>
+
+      <div class="article-grid">
+        <!-- To add an article: copy this whole <article> block, paste it above the first one (newest first),
+             then change the title, date, link, description and tags. Add data-i18n only for text that
+             has an EN/FR version in js/i18n.js. -->
+        <article class="project-card reveal">
+          <div class="project-card-head">
+            <h3>Quand les données personnelles deviennent des armes</h3>
+            <span class="project-award">
+              <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 4v10h14V8H5zm2 2h10v2H7v-2zm0 3h6v2H7v-2z" fill="currentColor"/></svg>
+              <span data-i18n="writing.a1.badge">Medium · Dec 2025 · In French</span>
+            </span>
+          </div>
+          <p class="project-desc" data-i18n="writing.a1.desc">Young women and online violence: how the personal data collected by digital platforms opens the door to harassment, blackmail and identity theft in Africa, with a focus on Togo, and why women's underrepresentation in tech design matters.</p>
+          <a class="project-link" href="https://medium.com/@ededa.blssi/quand-les-donn%C3%A9es-personnelles-deviennent-des-armes-les-jeunes-femmes-face-aux-violences-num-be3776f45b2d" target="_blank" rel="noopener noreferrer" data-i18n="writing.read">Read on Medium</a>
+          <ul class="tag-list">
+            <li data-i18n="writing.tag.privacy">Data privacy</li><li data-i18n="writing.tag.gender">Gender</li><li data-i18n="writing.tag.violence">Online violence</li><li>Togo</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="writing-cta reveal">
+        <a href="https://medium.com/@ededa.blssi" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="writing.all">All articles on Medium</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="section" id="awards">
+    <div class="container">
+      <p class="section-label reveal">07 - <span data-i18n="nav.awards">Awards</span></p>
+      <h2 class="section-heading reveal" data-i18n="awards.heading">Recognition along the way.</h2>
+
+      <div class="awards-grid">
+        <article class="award-card reveal">
+          <span class="award-icon" aria-hidden="true">
+            <svg class="icon-gold" viewBox="0 0 24 24" width="26" height="26"><use href="#icon-medal"/></svg>
+          </span>
+          <h3 data-i18n="awards.jabarie.title">3rd Prize - JPOPE 2026</h3>
+          <p class="timeline-org" data-i18n="awards.jabarie.meta">JABARIE · 3D video game</p>
+          <p data-i18n="awards.jabarie.desc">Awarded for JABARIE, an Afro-futuristic 3D action-adventure game built in Unity.</p>
+        </article>
+        <article class="award-card reveal">
+          <span class="award-icon" aria-hidden="true">
+            <svg class="icon-gold" viewBox="0 0 24 24" width="26" height="26"><use href="#icon-medal"/></svg>
+          </span>
+          <h3 data-i18n="awards.ivan.title">2nd Prize - JPOPE 2024</h3>
+          <p class="timeline-org" data-i18n="awards.ivan.meta">IVAN · AI chatbot</p>
+          <p data-i18n="awards.ivan.desc">Second prize for most innovative project at IPNET's Open Days, for IVAN, a multi-platform AI chatbot.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <p class="section-label reveal">08 - <span data-i18n="nav.skills">Skills</span></p>
       <h2 class="section-heading reveal" data-i18n="skills.heading">A broad technical base, sharpening toward Data &amp; AI.</h2>
 
       <div class="skills-grid">
@@ -452,82 +589,18 @@
     </div>
   </section>
 
-  <!-- AWARDS -->
-  <section class="section section-alt" id="awards">
-    <div class="container">
-      <p class="section-label reveal">06 - <span data-i18n="nav.awards">Awards</span></p>
-      <h2 class="section-heading reveal" data-i18n="awards.heading">Recognition along the way.</h2>
-
-      <div class="awards-grid">
-        <article class="award-card reveal">
-          <span class="award-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 15.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0-2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM9 16.7 5.8 22l3.7-.7 1.9 3 2.3-6.9zm6 0-2.7 6.6 2.3-3 3.7.7-3.2-5.3z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="awards.jabarie.title">3rd Prize - JPOPE 2026</h3>
-          <p class="timeline-org" data-i18n="awards.jabarie.meta">JABARIE · 3D video game</p>
-          <p data-i18n="awards.jabarie.desc">Awarded for JABARIE, an Afro-futuristic 3D action-adventure game built in Unity.</p>
-        </article>
-        <article class="award-card reveal">
-          <span class="award-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 15.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0-2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM9 16.7 5.8 22l3.7-.7 1.9 3 2.3-6.9zm6 0-2.7 6.6 2.3-3 3.7.7-3.2-5.3z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="awards.ivan.title">2nd Prize - JPOPE 2024</h3>
-          <p class="timeline-org" data-i18n="awards.ivan.meta">IVAN · AI chatbot</p>
-          <p data-i18n="awards.ivan.desc">Second prize for most innovative project at IPNET's Open Days, for IVAN, a multi-platform AI chatbot.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section" id="education">
-    <div class="container">
-      <p class="section-label reveal">07 - <span data-i18n="nav.education">Education</span></p>
-      <h2 class="section-heading reveal" data-i18n="education.heading">Foundations.</h2>
-
-      <div class="education-grid">
-        <div class="education-card reveal">
-          <h3 data-i18n="education.degree">Licence Professionnelle in Software Engineering</h3>
-          <p class="timeline-org">IPNET Institute of Technology (IIT) · Lomé, Togo</p>
-          <p data-i18n="education.years">2023 - 2026 · Third year, expected graduation in 2026</p>
-          <p data-i18n="education.thesis">Final-year project: CardioBeat, an AI-assisted cardiac sound screening prototype (thesis and defense).</p>
-        </div>
-        <div class="education-card reveal">
-          <h3 data-i18n="education.bac">Baccalauréat, Series D</h3>
-          <p class="timeline-org">Collège Protestant Lomé Agbalepedogan · Lomé, Togo</p>
-          <p data-i18n="education.bac.detail">2022 - 2023 · With highest honors (Très Bien)</p>
-        </div>
-        <div class="education-card reveal">
-          <h3 data-i18n="lang.title">Spoken Languages</h3>
-          <ul class="point-list">
-            <li data-i18n="lang.fr">French - fluent</li>
-            <li data-i18n="lang.en">English - intermediate, improving</li>
-            <li data-i18n="lang.mina">Mina - fluent</li>
-          </ul>
-        </div>
-        <div class="education-card reveal">
-          <h3 data-i18n="interests.title">Interests</h3>
-          <ul class="point-list">
-            <li data-i18n="interests.music">Music (bass guitar)</li>
-            <li data-i18n="interests.dance">Dance and travel</li>
-            <li data-i18n="interests.leadership">Women's leadership and entrepreneurship</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACT -->
-  <section class="section section-alt" id="contact">
+  <section class="section" id="contact">
     <div class="container contact-inner">
-      <p class="section-label reveal">08 - <span data-i18n="nav.contact">Contact</span></p>
+      <p class="section-label reveal">09 - <span data-i18n="nav.contact">Contact</span></p>
       <h2 class="section-heading reveal" data-i18n="contact.heading">Let's build something.</h2>
       <p class="contact-body reveal" data-i18n="contact.body">I'm open to internships, junior roles, and collaborations in software engineering, data, and AI. Feel free to reach out.</p>
 
       <div class="contact-links reveal">
-        <a href="mailto:ededa.blssi@gmail.com" class="contact-link">ededa.blssi@gmail.com</a>
+        <a href="mailto:ededa.blssi@gmail.com" class="contact-link">Email</a>
         <a href="https://www.linkedin.com/in/ed%C3%A9da-bleoussi/" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/JDD3021" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://medium.com/@ededa.blssi" class="contact-link" target="_blank" rel="noopener noreferrer">Medium</a>
       </div>
     </div>
   </section>
@@ -540,7 +613,7 @@
   </div>
 </footer>
 
-<script src="js/i18n.js?v=6"></script>
-<script src="js/main.js?v=6"></script>
+<script src="js/i18n.js?v=7"></script>
+<script src="js/main.js?v=8"></script>
 </body>
 </html>

@@ -90,6 +90,132 @@
     });
   }
 
+  // Navigation: dropdown groups (desktop) + highlight of the section in view
+  var navGroups = Array.prototype.slice.call(document.querySelectorAll(".nav-group"));
+  var desktopNav = window.matchMedia("(min-width: 1101px)");
+  var hoverCapable = window.matchMedia("(hover: hover)");
+
+  function setGroupOpen(group, open) {
+    group.classList.toggle("is-open", open);
+    if (desktopNav.matches) {
+      group.querySelector(".nav-group-toggle").setAttribute("aria-expanded", open ? "true" : "false");
+    }
+  }
+
+  function closeGroups(except) {
+    navGroups.forEach(function (g) {
+      if (g !== except) setGroupOpen(g, false);
+    });
+  }
+
+  // On small screens the groups are always expanded headings, not buttons
+  function syncNavMode() {
+    navGroups.forEach(function (g) {
+      var toggle = g.querySelector(".nav-group-toggle");
+      if (desktopNav.matches) {
+        toggle.removeAttribute("tabindex");
+        toggle.removeAttribute("aria-disabled");
+        toggle.setAttribute("aria-expanded", g.classList.contains("is-open") ? "true" : "false");
+      } else {
+        setGroupOpen(g, false);
+        toggle.setAttribute("tabindex", "-1");
+        toggle.setAttribute("aria-disabled", "true");
+        toggle.removeAttribute("aria-expanded");
+      }
+    });
+  }
+
+  navGroups.forEach(function (group) {
+    var toggle = group.querySelector(".nav-group-toggle");
+
+    toggle.addEventListener("click", function () {
+      if (!desktopNav.matches) return;
+      // With a mouse the hover already opened it; a click must not close it again
+      var willOpen = hoverCapable.matches ? true : !group.classList.contains("is-open");
+      closeGroups(group);
+      setGroupOpen(group, willOpen);
+    });
+    group.addEventListener("mouseenter", function () {
+      if (desktopNav.matches && hoverCapable.matches) {
+        closeGroups(group);
+        setGroupOpen(group, true);
+      }
+    });
+    group.addEventListener("mouseleave", function () {
+      if (desktopNav.matches && hoverCapable.matches) setGroupOpen(group, false);
+    });
+    group.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && group.classList.contains("is-open")) {
+        setGroupOpen(group, false);
+        toggle.focus();
+      }
+    });
+    group.addEventListener("focusout", function (e) {
+      if (desktopNav.matches && !group.contains(e.relatedTarget)) setGroupOpen(group, false);
+    });
+    group.querySelectorAll(".nav-submenu a").forEach(function (link) {
+      link.addEventListener("click", function () { setGroupOpen(group, false); });
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest || !e.target.closest(".nav-group")) closeGroups();
+  });
+  if (desktopNav.addEventListener) {
+    desktopNav.addEventListener("change", syncNavMode);
+  } else if (desktopNav.addListener) {
+    desktopNav.addListener(syncNavMode);
+  }
+  syncNavMode();
+
+  var spyTargets = [];
+  Array.prototype.forEach.call(document.querySelectorAll(".nav-list a[href^='#']"), function (link) {
+    var el = document.getElementById(link.getAttribute("href").slice(1));
+    if (el) spyTargets.push({ link: link, el: el });
+  });
+  var spyTicking = false;
+
+  function updateActiveSection() {
+    spyTicking = false;
+    if (!spyTargets.length) return;
+    var line = (header ? header.offsetHeight : 72) + window.innerHeight * 0.3;
+    var current = null;
+    var best = -Infinity;
+    spyTargets.forEach(function (t) {
+      var top = t.el.getBoundingClientRect().top;
+      if (top <= line && top > best) {
+        best = top;
+        current = t;
+      }
+    });
+    // the last section is short: light it up once the page bottom is reached
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      current = spyTargets[spyTargets.length - 1];
+    }
+    spyTargets.forEach(function (t) {
+      var on = t === current;
+      t.link.classList.toggle("is-active", on);
+      if (on) {
+        t.link.setAttribute("aria-current", "location");
+      } else {
+        t.link.removeAttribute("aria-current");
+      }
+    });
+    navGroups.forEach(function (g) {
+      g.querySelector(".nav-group-toggle").classList.toggle("is-active", !!g.querySelector("a.is-active"));
+    });
+  }
+
+  function requestSpy() {
+    if (!spyTicking) {
+      spyTicking = true;
+      window.requestAnimationFrame(updateActiveSection);
+    }
+  }
+  window.addEventListener("scroll", requestSpy, { passive: true });
+  window.addEventListener("resize", requestSpy);
+  updateActiveSection();
+
   // Scroll reveal
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
