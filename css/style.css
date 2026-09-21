@@ -226,16 +226,24 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--color-accent-soft);
   border: 1px solid var(--img-border);
 }
+/* The image stays in the layout (transparent) so loading="lazy" can fetch it;
+   display:none would block the request and it would never show. */
 .card-media img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: none;
+  opacity: 0;
+  transition: opacity 300ms ease;
 }
-.card-media img.is-loaded { display: block; }
+.card-media img.is-loaded { opacity: 1; }
+.card-media img.is-loaded ~ .card-media-placeholder { display: none; }
 .card-media-placeholder {
   position: absolute;
   inset: 0;
+  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: center;

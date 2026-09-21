@@ -1,652 +1,925 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edéda BLEOUSSI - Software Engineer | Data &amp; AI</title>
-<meta name="description" content="Portfolio and professional resume of Edéda Bleoussi, a software engineer based in Lomé, Togo, specializing in Data &amp; AI, backend development, and applied machine learning.">
-<meta name="author" content="Edéda Bleoussi">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#FFFFFF" id="meta-theme-color">
-<script>
-(function () {
-  var theme = "light";
-  try {
-    if (localStorage.getItem("site-theme") === "dark") theme = "dark";
-  } catch (e) {}
-  document.documentElement.setAttribute("data-theme", theme);
-  var meta = document.getElementById("meta-theme-color");
-  if (meta) meta.setAttribute("content", theme === "dark" ? "#100B16" : "#FFFFFF");
-})();
-</script>
-<link rel="canonical" href="https://jdd3021.github.io/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edéda BLEOUSSI - Software Engineer | Data &amp; AI</title>
+  <meta name="description"
+    content="Portfolio and professional resume of Edéda Bleoussi, a software engineer based in Lomé, Togo, specializing in Data &amp; AI, backend development, and applied machine learning.">
+  <meta name="author" content="Edéda Bleoussi">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FFFFFF" id="meta-theme-color">
+  <script>
+    (function () {
+      var theme = "light";
+      try {
+        if (localStorage.getItem("site-theme") === "dark") theme = "dark";
+      } catch (e) { }
+      document.documentElement.setAttribute("data-theme", theme);
+      var meta = document.getElementById("meta-theme-color");
+      if (meta) meta.setAttribute("content", theme === "dark" ? "#100B16" : "#FFFFFF");
+    })();
+  </script>
+  <link rel="canonical" href="https://jdd3021.github.io/">
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Edéda BLEOUSSI - Software Engineer | Data & AI">
-<meta property="og:description" content="Software engineer based in Lomé, Togo, specializing in Data & AI, backend development, and applied machine learning.">
-<meta property="og:url" content="https://jdd3021.github.io/">
-<meta property="og:locale" content="en_US">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Edéda BLEOUSSI - Software Engineer | Data & AI">
+  <meta property="og:description"
+    content="Software engineer based in Lomé, Togo, specializing in Data & AI, backend development, and applied machine learning.">
+  <meta property="og:url" content="https://jdd3021.github.io/">
+  <meta property="og:locale" content="en_US">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Edéda BLEOUSSI - Software Engineer | Data & AI">
-<meta name="twitter:description" content="Software engineer based in Lomé, Togo, specializing in Data & AI, backend development, and applied machine learning.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Edéda BLEOUSSI - Software Engineer | Data & AI">
+  <meta name="twitter:description"
+    content="Software engineer based in Lomé, Togo, specializing in Data & AI, backend development, and applied machine learning.">
 
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css?v=16">
+  <link rel="stylesheet" href="css/style.css?v=17">
 </head>
+
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <linearGradient id="gold-a" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFF6C4"/>
-      <stop offset="0.3" stop-color="#F7D354"/>
-      <stop offset="0.62" stop-color="#D9A21B"/>
-      <stop offset="1" stop-color="#A9740C"/>
-    </linearGradient>
-    <linearGradient id="gold-b" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F0C64A"/>
-      <stop offset="1" stop-color="#9A6A0B"/>
-    </linearGradient>
-    <linearGradient id="gold-c" x1="1" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="#FFEFA0"/>
-      <stop offset="0.55" stop-color="#E2B12A"/>
-      <stop offset="1" stop-color="#B57F10"/>
-    </linearGradient>
-    <symbol id="icon-medal" viewBox="0 0 24 24">
-      <path d="M6.5 1.5h4L14 9.2l-3.4 1.4z" fill="url(#gold-b)"/>
-      <path d="M17.5 1.5h-4L10 9.2l3.4 1.4z" fill="url(#gold-b)"/>
-      <circle cx="12" cy="15.2" r="6.6" fill="url(#gold-a)" stroke="#9A6A0B" stroke-width="0.5"/>
-      <circle cx="12" cy="15.2" r="4.7" fill="url(#gold-c)" stroke="#B98416" stroke-width="0.35"/>
-      <path d="M12 12.6l.617 1.751 1.856.046-1.473 1.128.528 1.778L12 16.25l-1.528 1.053.528-1.778-1.473-1.128 1.856-.046z" fill="url(#gold-a)" stroke="#9A6A0B" stroke-width="0.25" stroke-linejoin="round"/>
-      <path d="M7.11 12.38A5.65 5.65 0 0 1 9.61 10.08" fill="none" stroke="#fff" stroke-opacity="0.75" stroke-width="0.9" stroke-linecap="round"/>
-    </symbol>
-  </defs>
-</svg>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="gold-a" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#FFF6C4" />
+        <stop offset="0.3" stop-color="#F7D354" />
+        <stop offset="0.62" stop-color="#D9A21B" />
+        <stop offset="1" stop-color="#A9740C" />
+      </linearGradient>
+      <linearGradient id="gold-b" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F0C64A" />
+        <stop offset="1" stop-color="#9A6A0B" />
+      </linearGradient>
+      <linearGradient id="gold-c" x1="1" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#FFEFA0" />
+        <stop offset="0.55" stop-color="#E2B12A" />
+        <stop offset="1" stop-color="#B57F10" />
+      </linearGradient>
+      <symbol id="icon-medal" viewBox="0 0 24 24">
+        <path d="M6.5 1.5h4L14 9.2l-3.4 1.4z" fill="url(#gold-b)" />
+        <path d="M17.5 1.5h-4L10 9.2l3.4 1.4z" fill="url(#gold-b)" />
+        <circle cx="12" cy="15.2" r="6.6" fill="url(#gold-a)" stroke="#9A6A0B" stroke-width="0.5" />
+        <circle cx="12" cy="15.2" r="4.7" fill="url(#gold-c)" stroke="#B98416" stroke-width="0.35" />
+        <path
+          d="M12 12.6l.617 1.751 1.856.046-1.473 1.128.528 1.778L12 16.25l-1.528 1.053.528-1.778-1.473-1.128 1.856-.046z"
+          fill="url(#gold-a)" stroke="#9A6A0B" stroke-width="0.25" stroke-linejoin="round" />
+        <path d="M7.11 12.38A5.65 5.65 0 0 1 9.61 10.08" fill="none" stroke="#fff" stroke-opacity="0.75"
+          stroke-width="0.9" stroke-linecap="round" />
+      </symbol>
+    </defs>
+  </svg>
 
 
-<a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header" id="site-header">
-  <div class="container header-inner">
-    <a href="#top" class="logo" aria-label="Edéda Bleoussi - home">EDÉDA<span>BLEOUSSI</span></a>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Edéda Bleoussi - home">EDÉDA<span>BLEOUSSI</span></a>
 
-    <nav class="main-nav" id="main-nav" aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="#about" data-i18n="nav.about">About</a></li>
-        <li class="nav-group">
-          <button type="button" class="nav-group-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="menu-journey"><span data-i18n="nav.journey">Journey</span><svg class="nav-chevron" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <ul class="nav-submenu" id="menu-journey">
-            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-            <li><a href="#community" data-i18n="nav.community">Community</a></li>
-            <li><a href="#education" data-i18n="nav.education">Education</a></li>
-          </ul>
-        </li>
-        <li class="nav-group">
-          <button type="button" class="nav-group-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="menu-work"><span data-i18n="nav.work">Work</span><svg class="nav-chevron" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <ul class="nav-submenu" id="menu-work">
-            <li><a href="#projects" data-i18n="nav.projects">Selected Projects</a></li>
-            <li><a href="#writing" data-i18n="nav.writing">Writing</a></li>
-            <li><a href="#awards" data-i18n="nav.awards">Awards</a></li>
-          </ul>
-        </li>
-        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
-        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-      <div class="mobile-social">
-        <a href="https://www.linkedin.com/in/ed%C3%A9da-bleoussi/" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3v13h-3v-13zm6 0h3v1.9h.04c.42-.8 1.44-1.9 3.36-1.9 3.6 0 4.1 2.4 4.1 5.5v7.5h-3v-6.7c0-1.6-.03-3.6-2.2-3.6-2.2 0-2.55 1.7-2.55 3.5v6.8h-3v-13z" fill="currentColor"/></svg>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li class="nav-group">
+            <button type="button" class="nav-group-toggle" aria-expanded="false" aria-haspopup="true"
+              aria-controls="menu-journey"><span data-i18n="nav.journey">Journey</span><svg class="nav-chevron"
+                viewBox="0 0 24 24" width="12" height="12" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></button>
+            <ul class="nav-submenu" id="menu-journey">
+              <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+              <li><a href="#community" data-i18n="nav.community">Community</a></li>
+              <li><a href="#education" data-i18n="nav.education">Education</a></li>
+            </ul>
+          </li>
+          <li class="nav-group">
+            <button type="button" class="nav-group-toggle" aria-expanded="false" aria-haspopup="true"
+              aria-controls="menu-work"><span data-i18n="nav.work">Work</span><svg class="nav-chevron"
+                viewBox="0 0 24 24" width="12" height="12" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></button>
+            <ul class="nav-submenu" id="menu-work">
+              <li><a href="#projects" data-i18n="nav.projects">Selected Projects</a></li>
+              <li><a href="#writing" data-i18n="nav.writing">Writing</a></li>
+              <li><a href="#awards" data-i18n="nav.awards">Awards</a></li>
+            </ul>
+          </li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="mobile-social">
+          <a href="https://www.linkedin.com/in/ed%C3%A9da-bleoussi/" class="icon-link" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3v13h-3v-13zm6 0h3v1.9h.04c.42-.8 1.44-1.9 3.36-1.9 3.6 0 4.1 2.4 4.1 5.5v7.5h-3v-6.7c0-1.6-.03-3.6-2.2-3.6-2.2 0-2.55 1.7-2.55 3.5v6.8h-3v-13z"
+                fill="currentColor" />
+            </svg>
+          </a>
+          <a href="https://github.com/JDD3021" class="icon-link" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M12 1.5a10.5 10.5 0 0 0-3.32 20.47c.53.1.72-.23.72-.51v-1.98c-2.94.64-3.56-1.24-3.56-1.24-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.41-2.35-.27-4.82-1.17-4.82-5.21 0-1.15.41-2.09 1.09-2.83-.11-.27-.47-1.36.1-2.83 0 0 .89-.29 2.91 1.09a10.13 10.13 0 0 1 5.3 0c2.02-1.38 2.91-1.09 2.91-1.09.57 1.47.21 2.56.1 2.83.68.74 1.09 1.68 1.09 2.83 0 4.05-2.48 4.94-4.84 5.2.38.33.71.98.71 1.98v2.93c0 .28.19.62.72.51A10.5 10.5 0 0 0 12 1.5z"
+                fill="currentColor" />
+            </svg>
+          </a>
+          <a href="mailto:ededa.blssi@gmail.com" class="icon-link" aria-label="Send an email">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M2 5.5h20v13H2v-13zm2 1.2v.4l8 5.6 8-5.6v-.4H4zm16 2.4-7.43 5.2a1 1 0 0 1-1.14 0L6 9.1v8.4h16V9.1z"
+                fill="currentColor" />
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://www.linkedin.com/in/ed%C3%A9da-bleoussi/" class="icon-link" target="_blank"
+          rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path
+              d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3v13h-3v-13zm6 0h3v1.9h.04c.42-.8 1.44-1.9 3.36-1.9 3.6 0 4.1 2.4 4.1 5.5v7.5h-3v-6.7c0-1.6-.03-3.6-2.2-3.6-2.2 0-2.55 1.7-2.55 3.5v6.8h-3v-13z"
+              fill="currentColor" />
+          </svg>
         </a>
-        <a href="https://github.com/JDD3021" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.47c.53.1.72-.23.72-.51v-1.98c-2.94.64-3.56-1.24-3.56-1.24-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.41-2.35-.27-4.82-1.17-4.82-5.21 0-1.15.41-2.09 1.09-2.83-.11-.27-.47-1.36.1-2.83 0 0 .89-.29 2.91 1.09a10.13 10.13 0 0 1 5.3 0c2.02-1.38 2.91-1.09 2.91-1.09.57 1.47.21 2.56.1 2.83.68.74 1.09 1.68 1.09 2.83 0 4.05-2.48 4.94-4.84 5.2.38.33.71.98.71 1.98v2.93c0 .28.19.62.72.51A10.5 10.5 0 0 0 12 1.5z" fill="currentColor"/></svg>
+        <a href="https://github.com/JDD3021" class="icon-link" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub profile">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path
+              d="M12 1.5a10.5 10.5 0 0 0-3.32 20.47c.53.1.72-.23.72-.51v-1.98c-2.94.64-3.56-1.24-3.56-1.24-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.41-2.35-.27-4.82-1.17-4.82-5.21 0-1.15.41-2.09 1.09-2.83-.11-.27-.47-1.36.1-2.83 0 0 .89-.29 2.91 1.09a10.13 10.13 0 0 1 5.3 0c2.02-1.38 2.91-1.09 2.91-1.09.57 1.47.21 2.56.1 2.83.68.74 1.09 1.68 1.09 2.83 0 4.05-2.48 4.94-4.84 5.2.38.33.71.98.71 1.98v2.93c0 .28.19.62.72.51A10.5 10.5 0 0 0 12 1.5z"
+              fill="currentColor" />
+          </svg>
         </a>
         <a href="mailto:ededa.blssi@gmail.com" class="icon-link" aria-label="Send an email">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M2 5.5h20v13H2v-13zm2 1.2v.4l8 5.6 8-5.6v-.4H4zm16 2.4-7.43 5.2a1 1 0 0 1-1.14 0L6 9.1v8.4h16V9.1z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M2 5.5h20v13H2v-13zm2 1.2v.4l8 5.6 8-5.6v-.4H4zm16 2.4-7.43 5.2a1 1 0 0 1-1.14 0L6 9.1v8.4h16V9.1z"
+              fill="currentColor" />
+          </svg>
         </a>
-      </div>
-    </nav>
-
-    <div class="header-actions">
-      <a href="https://www.linkedin.com/in/ed%C3%A9da-bleoussi/" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3v13h-3v-13zm6 0h3v1.9h.04c.42-.8 1.44-1.9 3.36-1.9 3.6 0 4.1 2.4 4.1 5.5v7.5h-3v-6.7c0-1.6-.03-3.6-2.2-3.6-2.2 0-2.55 1.7-2.55 3.5v6.8h-3v-13z" fill="currentColor"/></svg>
-      </a>
-      <a href="https://github.com/JDD3021" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.47c.53.1.72-.23.72-.51v-1.98c-2.94.64-3.56-1.24-3.56-1.24-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.41-2.35-.27-4.82-1.17-4.82-5.21 0-1.15.41-2.09 1.09-2.83-.11-.27-.47-1.36.1-2.83 0 0 .89-.29 2.91 1.09a10.13 10.13 0 0 1 5.3 0c2.02-1.38 2.91-1.09 2.91-1.09.57 1.47.21 2.56.1 2.83.68.74 1.09 1.68 1.09 2.83 0 4.05-2.48 4.94-4.84 5.2.38.33.71.98.71 1.98v2.93c0 .28.19.62.72.51A10.5 10.5 0 0 0 12 1.5z" fill="currentColor"/></svg>
-      </a>
-      <a href="mailto:ededa.blssi@gmail.com" class="icon-link" aria-label="Send an email">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M2 5.5h20v13H2v-13zm2 1.2v.4l8 5.6 8-5.6v-.4H4zm16 2.4-7.43 5.2a1 1 0 0 1-1.14 0L6 9.1v8.4h16V9.1z" fill="currentColor"/></svg>
-      </a>
-      <a href="assets/cv/Ededa-Bleoussi-CV.pdf" class="btn btn-primary btn-sm header-cta" download data-i18n="hero.cta.cv">Download CV</a>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
-        <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
-      <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Switch language">FR</button>
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <p class="eyebrow reveal" data-i18n="hero.eyebrow">SOFTWARE ENGINEER · DATA &amp; AI · RESPONSIBLE DIGITAL</p>
-        <h1 class="hero-name reveal">Edéda <span class="accent">Bleoussi</span></h1>
-        <p class="hero-statement reveal" data-i18n="hero.statement">Software, data, and AI - built end-to-end, from problem to product.</p>
-        <p class="hero-meta reveal">
-          <span class="meta-item">
-            <svg class="meta-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 6.24 12.34 6.51 12.64a.66.66 0 0 0 .98 0C12.76 21.34 19 14.25 19 9c0-3.86-3.14-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
-            <span data-i18n="hero.location">Lomé, Togo</span>
-          </span>
-          <span aria-hidden="true">·</span>
-          <span data-i18n="hero.education">Software Engineering, IPNET Institute of Technology</span>
-        </p>
-        <div class="hero-cta reveal">
-          <a href="assets/cv/Ededa-Bleoussi-CV.pdf" class="btn btn-primary" download data-i18n="hero.cta.cv">Download CV</a>
-          <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta.contact">Contact Me</a>
-        </div>
-      </div>
-      <div class="hero-photo reveal" data-photo-fallback>
-        <div class="profile-photo">
-          <img src="assets/img/profile.jpg" data-full="assets/img/graduation.jpg" alt="Portrait of Edéda Bleoussi">
-          <div class="profile-photo-placeholder" aria-hidden="true">EB</div>
-        </div>
+        <a href="assets/cv/Ededa-Bleoussi-CV.pdf" class="btn btn-primary btn-sm header-cta" download
+          data-i18n="hero.cta.cv">Download CV</a>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Switch language">FR</button>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav"
+          aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="container">
-      <p class="section-label reveal">01 - <span data-i18n="nav.about">About</span></p>
-      <div class="about-grid">
-        <div class="about-photo reveal">
-          <img src="assets/img/about.jpg" data-full="assets/img/me_working.jpg" alt="Edéda Bleoussi working on a laptop">
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow reveal" data-i18n="hero.eyebrow">SOFTWARE ENGINEER · DATA &amp; AI · RESPONSIBLE DIGITAL</p>
+          <h1 class="hero-name reveal">Edéda <span class="accent">Bleoussi</span></h1>
+          <p class="hero-statement reveal" data-i18n="hero.statement">Software, data, and AI - built end-to-end, from
+            problem to product.</p>
+          <p class="hero-meta reveal">
+            <span class="meta-item">
+              <svg class="meta-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                <path
+                  d="M12 2C8.14 2 5 5.14 5 9c0 5.25 6.24 12.34 6.51 12.64a.66.66 0 0 0 .98 0C12.76 21.34 19 14.25 19 9c0-3.86-3.14-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"
+                  fill="currentColor" />
+              </svg>
+              <span data-i18n="hero.location">Lomé, Togo</span>
+            </span>
+            <span aria-hidden="true">·</span>
+            <span data-i18n="hero.education">Software Engineering, IPNET Institute of Technology</span>
+          </p>
+          <div class="hero-cta reveal">
+            <a href="assets/cv/Ededa-Bleoussi-CV.pdf" class="btn btn-primary" download data-i18n="hero.cta.cv">Download
+              CV</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta.contact">Contact Me</a>
+          </div>
         </div>
-        <div class="about-content">
-          <h2 class="section-heading reveal" data-i18n="about.heading">A software engineer moving deeper into data &amp; AI.</h2>
-          <div class="about-body reveal">
-            <p data-i18n="about.p1">I'm a third-year software engineering student with an initial background in mathematics, progressively specializing in artificial intelligence, data analysis, and software development. I design data-driven digital solutions that combine technical rigor, critical thinking, and social impact.</p>
-            <p data-i18n="about.p2">Across my internships and projects, I've worked through the full stack: cleaning and analyzing data, building APIs, integrating machine learning models, and designing interfaces for web and mobile. I'm particularly interested in digital security, gender, and responsible technology in Africa - and I'm equally at ease on the technical and communication sides, with active involvement in student leadership, tech popularization, and data storytelling.</p>
-            <p data-i18n="about.p3">I'm currently based in Lomé, Togo, and open to opportunities that let me contribute to teams solving problems that matter - in Togo or internationally.</p>
+        <div class="hero-photo reveal" data-photo-fallback>
+          <div class="profile-photo">
+            <img src="assets/img/profile.jpg" data-full="assets/img/graduation.jpg" alt="Portrait of Edéda Bleoussi">
+            <div class="profile-photo-placeholder" aria-hidden="true">EB</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPERIENCE -->
-  <section class="section section-alt" id="experience">
-    <div class="container">
-      <p class="section-label reveal">02 - <span data-i18n="nav.experience">Experience</span></p>
-      <h2 class="section-heading reveal" data-i18n="exp.heading">Where I've applied what I know.</h2>
-
-      <div class="timeline">
-        <article class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="timeline-date" data-i18n="exp.mixx.date">2026 - Present</span>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-label reveal">01 - <span data-i18n="nav.about">About</span></p>
+        <div class="about-grid">
+          <div class="about-photo reveal">
+            <img src="assets/img/about.jpg" data-full="assets/img/me_working.jpg"
+              alt="Edéda Bleoussi working on a laptop">
           </div>
-          <div class="timeline-content">
-            <h3 data-i18n="exp.mixx.role">Data Analysis Intern</h3>
-            <p class="timeline-org">Mixx By Yas · <span data-i18n="exp.mixx.place">Lomé, Togo</span></p>
-            <p data-i18n="exp.mixx.body">Financial data analysis and reconciliation on the partner accounts of a mobile payment operator.</p>
+          <div class="about-content">
+            <h2 class="section-heading reveal" data-i18n="about.heading">A software engineer moving deeper into data
+              &amp; AI.</h2>
+            <div class="about-body reveal">
+              <p data-i18n="about.p1">I'm a third-year software engineering student with an initial background in
+                mathematics, progressively specializing in artificial intelligence, data analysis, and software
+                development. I design data-driven digital solutions that combine technical rigor, critical thinking, and
+                social impact.</p>
+              <p data-i18n="about.p2">Across my internships and projects, I've worked through the full stack: cleaning
+                and analyzing data, building APIs, integrating machine learning models, and designing interfaces for web
+                and mobile. I'm particularly interested in digital security, gender, and responsible technology in
+                Africa - and I'm equally at ease on the technical and communication sides, with active involvement in
+                student leadership, tech popularization, and data storytelling.</p>
+              <p data-i18n="about.p3">I'm currently based in Lomé, Togo, and open to opportunities that let me
+                contribute to teams solving problems that matter - in Togo or internationally.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <p class="section-label reveal">02 - <span data-i18n="nav.experience">Experience</span></p>
+        <h2 class="section-heading reveal" data-i18n="exp.heading">Where I've applied what I know.</h2>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="exp.mixx.date">2026 - Present</span>
+            </div>
+            <div class="timeline-content">
+              <h3 data-i18n="exp.mixx.role">Data Analysis Intern</h3>
+              <p class="timeline-org">Mixx By Yas · <span data-i18n="exp.mixx.place">Lomé, Togo</span></p>
+              <p data-i18n="exp.mixx.body">Financial data analysis and reconciliation on the partner accounts of a
+                mobile payment operator.</p>
+              <ul class="point-list">
+                <li data-i18n="exp.mixx.p1">Cleaned and validated 1,000+ row financial files: duplicates removed, dates
+                  fixed, gaps brought back to zero.</li>
+                <li data-i18n="exp.mixx.p2">Ran periodic three-source reconciliations and automated recurring PostgreSQL
+                  queries with Python.</li>
+              </ul>
+              <ul class="tag-list">
+                <li>Excel</li>
+                <li>PostgreSQL</li>
+                <li>SQL</li>
+                <li>Python</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="exp.menumap.date">Startup Project</span>
+            </div>
+            <div class="timeline-content">
+              <h3 data-i18n="exp.menumap.role">CTO</h3>
+              <p class="timeline-org">MenuMap · <span data-i18n="exp.menumap.place">Startup project</span></p>
+              <p data-i18n="exp.menumap.body">Led the technical direction of MenuMap, a startup project, from concept to
+                a working prototype.</p>
+              <ul class="point-list">
+                <li data-i18n="exp.menumap.p1">Defined the technical direction of the product.</li>
+                <li data-i18n="exp.menumap.p2">Developed it hands-on through to a working prototype.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="exp.thesymo.date">Aug - Oct 2025</span>
+            </div>
+            <div class="timeline-content">
+              <h3 data-i18n="exp.thesymo.role">Software Development Intern</h3>
+              <p class="timeline-org">THESYMO · <span data-i18n="exp.thesymo.place">Lomé, Togo</span></p>
+              <p data-i18n="exp.thesymo.body">Backend and AI work on a content analysis and recommendation product.</p>
+              <ul class="point-list">
+                <li data-i18n="exp.thesymo.p1">Designed a content analysis and recommendation API with FastAPI.</li>
+                <li data-i18n="exp.thesymo.p2">Integrated an intelligent chatbot using LangChain and Ollama.</li>
+              </ul>
+              <ul class="tag-list">
+                <li>FastAPI</li>
+                <li>LangChain</li>
+                <li>Ollama</li>
+                <li>Python</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="exp.thot.date">Jul - Sep 2024</span>
+            </div>
+            <div class="timeline-content">
+              <h3 data-i18n="exp.thot.role">Software Development Intern</h3>
+              <p class="timeline-org">Thot Lab · <span data-i18n="exp.thot.place">Lomé, Togo</span></p>
+              <p data-i18n="exp.thot.body">Backend developer on the engineering team, working on REST APIs.</p>
+              <ul class="point-list">
+                <li data-i18n="exp.thot.p1">Built REST APIs in Node.js, integrated with a PostgreSQL database.</li>
+                <li data-i18n="exp.thot.p2">Improved code performance by 30% through refactoring and unit tests.</li>
+                <li data-i18n="exp.thot.p3">Wrote the technical documentation with Swagger.</li>
+              </ul>
+              <ul class="tag-list">
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>REST API</li>
+                <li>Swagger</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="section" id="community">
+      <div class="container">
+        <p class="section-label reveal">03 - <span data-i18n="nav.community">Community</span></p>
+        <h2 class="section-heading reveal" data-i18n="vol.heading">Volunteering in the communities I care about.</h2>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="vol.ipnet.date">Student Leadership</span>
+            </div>
+            <div class="timeline-content">
+              <h3 data-i18n="vol.ipnet.role">Vice President</h3>
+              <p class="timeline-org">IPNET Developer Club · <span data-i18n="vol.ipnet.place">IPNET Institute of
+                  Technology</span></p>
+              <p data-i18n="vol.ipnet.body">Co-led a student developer community at IPNET Institute of Technology.</p>
+              <ul class="point-list">
+                <li data-i18n="vol.ipnet.p1">Coordinated the club's technical activities.</li>
+                <li data-i18n="vol.ipnet.p2">Supported peer learning and drove collaborative projects.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="vol.outreach.date">Student Engagement</span>
+            </div>
+            <div class="timeline-content">
+              <h3 data-i18n="vol.outreach.role">Competitions, Debates &amp; Outreach</h3>
+              <p class="timeline-org" data-i18n="vol.outreach.place">Student community</p>
+              <p data-i18n="vol.outreach.body">Active in student life beyond the developer club.</p>
+              <ul class="point-list">
+                <li data-i18n="vol.outreach.p1">Took part in academic competitions and debates.</li>
+                <li data-i18n="vol.outreach.p2">Popularized scientific and technical topics among fellow students.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <p class="section-label reveal">04 - <span data-i18n="nav.education">Education</span></p>
+        <h2 class="section-heading reveal" data-i18n="education.heading">Foundations.</h2>
+
+        <div class="education-grid">
+          <div class="education-card reveal">
+            <h3 data-i18n="education.degree">Licence Professionnelle in Software Engineering</h3>
+            <p class="timeline-org">IPNET Institute of Technology (IIT) · Lomé, Togo</p>
+            <p data-i18n="education.years">2023 - 2026 · Third year, expected graduation in 2026</p>
+            <p data-i18n="education.thesis">Final-year project: CardioBeat, an AI-assisted cardiac sound screening
+              prototype (thesis and defense).</p>
+          </div>
+          <div class="education-card reveal">
+            <h3 data-i18n="education.bac">Baccalauréat, Series D</h3>
+            <p class="timeline-org">Collège Protestant Lomé Agbalepedogan · Lomé, Togo</p>
+            <p data-i18n="education.bac.detail">2022 - 2023 · With highest honors (Très Bien)</p>
+          </div>
+          <div class="education-card reveal">
+            <h3 data-i18n="lang.title">Spoken Languages</h3>
             <ul class="point-list">
-              <li data-i18n="exp.mixx.p1">Cleaned and validated 1,000+ row financial files: duplicates removed, dates fixed, gaps brought back to zero.</li>
-              <li data-i18n="exp.mixx.p2">Ran periodic three-source reconciliations and automated recurring PostgreSQL queries with Python.</li>
+              <li data-i18n="lang.fr">French - fluent</li>
+              <li data-i18n="lang.en">English - intermediate, improving</li>
+              <li data-i18n="lang.mina">Mina - fluent</li>
+            </ul>
+          </div>
+          <div class="education-card reveal">
+            <h3 data-i18n="interests.title">Interests</h3>
+            <ul class="point-list">
+              <li data-i18n="interests.music">Music (bass guitar)</li>
+              <li data-i18n="interests.dance">Dance and travel</li>
+              <li data-i18n="interests.leadership">Women's leadership and entrepreneurship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-label reveal">05 - <span data-i18n="nav.projects">Selected Projects</span></p>
+        <h2 class="section-heading reveal" data-i18n="projects.heading">Ideas taken through to working software.</h2>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="card-media" data-photo-fallback>
+              <img src="assets/img/projects/cardiobeat.jpg" alt="CardioBeat project photo" loading="lazy">
+              <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                    fill="currentColor" />
+                </svg></div>
+            </div>
+            <div class="project-card-head">
+              <h3>CardioBeat</h3>
+              <span class="project-award">
+                <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                  <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                    fill="currentColor" />
+                </svg>
+                <span data-i18n="proj.cardiobeat.badge">Final-year project</span>
+              </span>
+            </div>
+            <p class="project-desc" data-i18n="proj.cardiobeat.desc">AI-assisted cardiac sound screening prototype that
+              classifies heart sounds as Normal or Abnormal. A decision-support tool, not a diagnostic device.</p>
+            <ul class="point-list">
+              <li data-i18n="proj.cardiobeat.p1">Model results: 87.7% accuracy and 89.2% sensitivity.</li>
+              <li data-i18n="proj.cardiobeat.p2">Delivered a demo mobile app, a FastAPI service and a UML analysis
+                document.</li>
+            </ul>
+            <a class="project-link" href="https://cardiobeat.duckdns.org/" target="_blank" rel="noopener noreferrer"
+              data-i18n="proj.link.live">View project</a>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Deep Learning</li>
+              <li>FastAPI</li>
+              <li>Flutter</li>
+            </ul>
+          </article>
+          <article class="project-card reveal">
+            <div class="card-media" data-photo-fallback>
+              <img src="assets/img/projects/jabarie.jpg" alt="JABARIE game screenshot" loading="lazy">
+              <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                    fill="currentColor" />
+                </svg></div>
+            </div>
+            <div class="project-card-head">
+              <h3>JABARIE</h3>
+              <span class="project-award">
+                <svg class="icon-gold award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                  <use href="#icon-medal" />
+                </svg>
+                <span data-i18n="proj.jabarie.badge">3rd Prize - JPOPE 2026</span>
+              </span>
+            </div>
+            <p class="project-desc" data-i18n="proj.jabarie.desc">Afro-futuristic 3D action-adventure game built in
+              Unity by a team of two, set in a futuristic African world.</p>
+            <ul class="point-list">
+              <li data-i18n="proj.jabarie.p1">Wrote the game design document, script and pitch; tracked a backlog of
+                about 150 tasks.</li>
+              <li data-i18n="proj.jabarie.p2">Prepared the business plan, hardware partnership, poster and jury pitch.
+              </li>
             </ul>
             <ul class="tag-list">
-              <li>Excel</li><li>PostgreSQL</li><li>SQL</li><li>Python</li>
+              <li>Unity</li>
+              <li>C#</li>
+              <li>3D</li>
+              <li>Game Development</li>
             </ul>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="timeline-date" data-i18n="exp.menumap.date">Startup Project</span>
-          </div>
-          <div class="timeline-content">
-            <h3 data-i18n="exp.menumap.role">CTO</h3>
-            <p class="timeline-org">MenuMap · <span data-i18n="exp.menumap.place">Startup project</span></p>
-            <p data-i18n="exp.menumap.body">Led the technical direction of MenuMap, a startup project, from concept to a working prototype.</p>
+          </article>
+          <article class="project-card reveal">
+            <div class="card-media" data-photo-fallback>
+              <img src="assets/img/projects/ivan.jpg" alt="IVAN chatbot screenshot" loading="lazy">
+              <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                    fill="currentColor" />
+                </svg></div>
+            </div>
+            <div class="project-card-head">
+              <h3>IVAN</h3>
+              <span class="project-award">
+                <svg class="icon-gold award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                  <use href="#icon-medal" />
+                </svg>
+                <span data-i18n="proj.ivan.badge">2nd Prize - JPOPE 2024</span>
+              </span>
+            </div>
+            <p class="project-desc" data-i18n="proj.ivan.desc">Multi-platform AI chatbot built with React, FastAPI and
+              CamemBERT (NLP), deployed with Docker and Render.</p>
             <ul class="point-list">
-              <li data-i18n="exp.menumap.p1">Defined the technical direction of the product.</li>
-              <li data-i18n="exp.menumap.p2">Developed it hands-on through to a working prototype.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="timeline-date" data-i18n="exp.thesymo.date">Aug - Oct 2025</span>
-          </div>
-          <div class="timeline-content">
-            <h3 data-i18n="exp.thesymo.role">Software Development Intern</h3>
-            <p class="timeline-org">THESYMO · <span data-i18n="exp.thesymo.place">Lomé, Togo</span></p>
-            <p data-i18n="exp.thesymo.body">Backend and AI work on a content analysis and recommendation product.</p>
-            <ul class="point-list">
-              <li data-i18n="exp.thesymo.p1">Designed a content analysis and recommendation API with FastAPI.</li>
-              <li data-i18n="exp.thesymo.p2">Integrated an intelligent chatbot using LangChain and Ollama.</li>
+              <li data-i18n="proj.ivan.p1">Developed with React, FastAPI and CamemBERT for natural language processing.
+              </li>
+              <li data-i18n="proj.ivan.p2">Deployed with Docker and Render.</li>
+              <li data-i18n="proj.ivan.p3">Presented at IPNET's Open Days and awarded 2nd prize for most innovative
+                project.</li>
             </ul>
             <ul class="tag-list">
-              <li>FastAPI</li><li>LangChain</li><li>Ollama</li><li>Python</li>
+              <li>React</li>
+              <li>FastAPI</li>
+              <li>CamemBERT</li>
+              <li>NLP</li>
+              <li>Docker</li>
+              <li>Render</li>
             </ul>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="timeline-date" data-i18n="exp.thot.date">Jul - Sep 2024</span>
-          </div>
-          <div class="timeline-content">
-            <h3 data-i18n="exp.thot.role">Software Development Intern</h3>
-            <p class="timeline-org">Thot Lab · <span data-i18n="exp.thot.place">Lomé, Togo</span></p>
-            <p data-i18n="exp.thot.body">Backend developer on the engineering team, working on REST APIs.</p>
+          </article>
+          <article class="project-card reveal">
+            <div class="card-media" data-photo-fallback>
+              <img src="assets/img/projects/pharmapp.jpg" alt="PharmApp project screenshot" loading="lazy">
+              <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                    fill="currentColor" />
+                </svg></div>
+            </div>
+            <div class="project-card-head">
+              <h3>PharmApp</h3>
+              <span class="project-award">
+                <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                  <path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 4v10h16V8H4z"
+                    fill="currentColor" />
+                </svg>
+                <span data-i18n="proj.pharmapp.badge">2025 - Student project</span>
+              </span>
+            </div>
+            <p class="project-desc" data-i18n="proj.pharmapp.desc">Web application for automated pharmacy stock
+              management and tracking, built as a professional student project.</p>
             <ul class="point-list">
-              <li data-i18n="exp.thot.p1">Built REST APIs in Node.js, integrated with a PostgreSQL database.</li>
-              <li data-i18n="exp.thot.p2">Improved code performance by 30% through refactoring and unit tests.</li>
-              <li data-i18n="exp.thot.p3">Wrote the technical documentation with Swagger.</li>
+              <li data-i18n="proj.pharmapp.p1">Built with Django and PostgreSQL.</li>
+              <li data-i18n="proj.pharmapp.p2">Sales and customer management alongside stock tracking.</li>
+              <li data-i18n="proj.pharmapp.p3">Financial reports and analytics.</li>
+            </ul>
+            <a class="project-link" href="https://github.com/JDD3021/pharmapp" target="_blank" rel="noopener noreferrer"
+              data-i18n="proj.link.github">View on GitHub</a>
+            <ul class="tag-list">
+              <li>Django</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </article>
+          <article class="project-card project-card-wide reveal">
+            <div class="card-media" data-photo-fallback>
+              <img src="assets/img/projects/wordpress.jpg" alt="WordPress projects screenshot" loading="lazy">
+              <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                    fill="currentColor" />
+                </svg></div>
+            </div>
+            <div class="project-card-head">
+              <h3 data-i18n="proj.wp.title">WordPress Projects</h3>
+              <span class="project-award">
+                <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                  <path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 4v10h16V8H4z"
+                    fill="currentColor" />
+                </svg>
+                <span>CMS</span>
+              </span>
+            </div>
+            <p class="project-desc" data-i18n="proj.wp.desc">Websites built and managed with WordPress.</p>
+            <ul class="point-list">
+              <li><a class="inline-link" href="https://dev-ed-bl-portfolio.pantheonsite.io/" target="_blank"
+                  rel="noopener noreferrer" data-i18n="proj.wp.portfolio">Portfolio site</a></li>
+              <li><a class="inline-link" href="https://dev-ed-association.pantheonsite.io/" target="_blank"
+                  rel="noopener noreferrer" data-i18n="proj.wp.shop">Online shop (in progress)</a></li>
             </ul>
             <ul class="tag-list">
-              <li>Node.js</li><li>PostgreSQL</li><li>REST API</li><li>Swagger</li>
+              <li>WordPress</li>
             </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMMUNITY -->
-  <section class="section" id="community">
-    <div class="container">
-      <p class="section-label reveal">03 - <span data-i18n="nav.community">Community</span></p>
-      <h2 class="section-heading reveal" data-i18n="vol.heading">Volunteering in the communities I care about.</h2>
-
-      <div class="timeline">
-        <article class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="timeline-date" data-i18n="vol.ipnet.date">Student Leadership</span>
-          </div>
-          <div class="timeline-content">
-            <h3 data-i18n="vol.ipnet.role">Vice President</h3>
-            <p class="timeline-org">IPNET Developer Club · <span data-i18n="vol.ipnet.place">IPNET Institute of Technology</span></p>
-            <p data-i18n="vol.ipnet.body">Co-led a student developer community at IPNET Institute of Technology.</p>
-            <ul class="point-list">
-              <li data-i18n="vol.ipnet.p1">Coordinated the club's technical activities.</li>
-              <li data-i18n="vol.ipnet.p2">Supported peer learning and drove collaborative projects.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="timeline-date" data-i18n="vol.outreach.date">Student Engagement</span>
-          </div>
-          <div class="timeline-content">
-            <h3 data-i18n="vol.outreach.role">Competitions, Debates &amp; Outreach</h3>
-            <p class="timeline-org" data-i18n="vol.outreach.place">Student community</p>
-            <p data-i18n="vol.outreach.body">Active in student life beyond the developer club.</p>
-            <ul class="point-list">
-              <li data-i18n="vol.outreach.p1">Took part in academic competitions and debates.</li>
-              <li data-i18n="vol.outreach.p2">Popularized scientific and technical topics among fellow students.</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section section-alt" id="education">
-    <div class="container">
-      <p class="section-label reveal">04 - <span data-i18n="nav.education">Education</span></p>
-      <h2 class="section-heading reveal" data-i18n="education.heading">Foundations.</h2>
-
-      <div class="education-grid">
-        <div class="education-card reveal">
-          <h3 data-i18n="education.degree">Licence Professionnelle in Software Engineering</h3>
-          <p class="timeline-org">IPNET Institute of Technology (IIT) · Lomé, Togo</p>
-          <p data-i18n="education.years">2023 - 2026 · Third year, expected graduation in 2026</p>
-          <p data-i18n="education.thesis">Final-year project: CardioBeat, an AI-assisted cardiac sound screening prototype (thesis and defense).</p>
-        </div>
-        <div class="education-card reveal">
-          <h3 data-i18n="education.bac">Baccalauréat, Series D</h3>
-          <p class="timeline-org">Collège Protestant Lomé Agbalepedogan · Lomé, Togo</p>
-          <p data-i18n="education.bac.detail">2022 - 2023 · With highest honors (Très Bien)</p>
-        </div>
-        <div class="education-card reveal">
-          <h3 data-i18n="lang.title">Spoken Languages</h3>
-          <ul class="point-list">
-            <li data-i18n="lang.fr">French - fluent</li>
-            <li data-i18n="lang.en">English - intermediate, improving</li>
-            <li data-i18n="lang.mina">Mina - fluent</li>
-          </ul>
-        </div>
-        <div class="education-card reveal">
-          <h3 data-i18n="interests.title">Interests</h3>
-          <ul class="point-list">
-            <li data-i18n="interests.music">Music (bass guitar)</li>
-            <li data-i18n="interests.dance">Dance and travel</li>
-            <li data-i18n="interests.leadership">Women's leadership and entrepreneurship</li>
-          </ul>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="container">
-      <p class="section-label reveal">05 - <span data-i18n="nav.projects">Selected Projects</span></p>
-      <h2 class="section-heading reveal" data-i18n="projects.heading">Ideas taken through to working software.</h2>
+    <!-- WRITING -->
+    <section class="section section-alt" id="writing">
+      <div class="container">
+        <p class="section-label reveal">06 - <span data-i18n="nav.writing">Writing</span></p>
+        <h2 class="section-heading reveal" data-i18n="writing.heading">Ideas worth writing down.</h2>
+        <p class="section-intro reveal" data-i18n="writing.intro">I write on Medium about technology and its human
+          impact. More articles are on the way.</p>
 
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <div class="card-media" data-photo-fallback>
-            <img src="assets/img/projects/cardiobeat.jpg" alt="CardioBeat project photo" loading="lazy">
-            <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="currentColor"/></svg></div>
-          </div>
-          <div class="project-card-head">
-            <h3>CardioBeat</h3>
-            <span class="project-award">
-              <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="currentColor"/></svg>
-              <span data-i18n="proj.cardiobeat.badge">Final-year project</span>
-            </span>
-          </div>
-          <p class="project-desc" data-i18n="proj.cardiobeat.desc">AI-assisted cardiac sound screening prototype that classifies heart sounds as Normal or Abnormal. A decision-support tool, not a diagnostic device.</p>
-          <ul class="point-list">
-            <li data-i18n="proj.cardiobeat.p1">Model results: 87.7% accuracy and 89.2% sensitivity.</li>
-            <li data-i18n="proj.cardiobeat.p2">Delivered a demo mobile app, a FastAPI service and a UML analysis document.</li>
-          </ul>
-          <a class="project-link" href="https://cardiobeat.duckdns.org/" target="_blank" rel="noopener noreferrer" data-i18n="proj.link.live">View project</a>
-          <ul class="tag-list">
-            <li>Python</li><li>Deep Learning</li><li>FastAPI</li><li>Flutter</li>
-          </ul>
-        </article>
-        <article class="project-card reveal">
-          <div class="card-media" data-photo-fallback>
-            <img src="assets/img/projects/jabarie.jpg" alt="JABARIE game screenshot" loading="lazy">
-            <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="currentColor"/></svg></div>
-          </div>
-          <div class="project-card-head">
-            <h3>JABARIE</h3>
-            <span class="project-award">
-              <svg class="icon-gold award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#icon-medal"/></svg>
-              <span data-i18n="proj.jabarie.badge">3rd Prize - JPOPE 2026</span>
-            </span>
-          </div>
-          <p class="project-desc" data-i18n="proj.jabarie.desc">Afro-futuristic 3D action-adventure game built in Unity by a team of two, set in a futuristic African world.</p>
-          <ul class="point-list">
-            <li data-i18n="proj.jabarie.p1">Wrote the game design document, script and pitch; tracked a backlog of about 150 tasks.</li>
-            <li data-i18n="proj.jabarie.p2">Prepared the business plan, hardware partnership, poster and jury pitch.</li>
-          </ul>
-          <ul class="tag-list">
-            <li>Unity</li><li>C#</li><li>3D</li><li>Game Development</li>
-          </ul>
-        </article>
-        <article class="project-card reveal">
-          <div class="card-media" data-photo-fallback>
-            <img src="assets/img/projects/ivan.jpg" alt="IVAN chatbot screenshot" loading="lazy">
-            <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="currentColor"/></svg></div>
-          </div>
-          <div class="project-card-head">
-            <h3>IVAN</h3>
-            <span class="project-award">
-              <svg class="icon-gold award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#icon-medal"/></svg>
-              <span data-i18n="proj.ivan.badge">2nd Prize - JPOPE 2024</span>
-            </span>
-          </div>
-          <p class="project-desc" data-i18n="proj.ivan.desc">Multi-platform AI chatbot built with React, FastAPI and CamemBERT (NLP), deployed with Docker and Render.</p>
-          <ul class="point-list">
-            <li data-i18n="proj.ivan.p1">Developed with React, FastAPI and CamemBERT for natural language processing.</li>
-            <li data-i18n="proj.ivan.p2">Deployed with Docker and Render.</li>
-            <li data-i18n="proj.ivan.p3">Presented at IPNET's Open Days and awarded 2nd prize for most innovative project.</li>
-          </ul>
-          <ul class="tag-list">
-            <li>React</li><li>FastAPI</li><li>CamemBERT</li><li>NLP</li><li>Docker</li><li>Render</li>
-          </ul>
-        </article>
-        <article class="project-card reveal">
-          <div class="card-media" data-photo-fallback>
-            <img src="assets/img/projects/pharmapp.jpg" alt="PharmApp project screenshot" loading="lazy">
-            <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="currentColor"/></svg></div>
-          </div>
-          <div class="project-card-head">
-            <h3>PharmApp</h3>
-            <span class="project-award">
-              <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 4v10h16V8H4z" fill="currentColor"/></svg>
-              <span data-i18n="proj.pharmapp.badge">2025 - Student project</span>
-            </span>
-          </div>
-          <p class="project-desc" data-i18n="proj.pharmapp.desc">Web application for automated pharmacy stock management and tracking, built as a professional student project.</p>
-          <ul class="point-list">
-            <li data-i18n="proj.pharmapp.p1">Built with Django and PostgreSQL.</li>
-            <li data-i18n="proj.pharmapp.p2">Sales and customer management alongside stock tracking.</li>
-            <li data-i18n="proj.pharmapp.p3">Financial reports and analytics.</li>
-          </ul>
-          <a class="project-link" href="https://github.com/JDD3021/pharmapp" target="_blank" rel="noopener noreferrer" data-i18n="proj.link.github">View on GitHub</a>
-          <ul class="tag-list">
-            <li>Django</li><li>PostgreSQL</li>
-          </ul>
-        </article>
-        <article class="project-card project-card-wide reveal">
-          <div class="card-media" data-photo-fallback>
-            <img src="assets/img/projects/wordpress.jpg" alt="WordPress projects screenshot" loading="lazy">
-            <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="currentColor"/></svg></div>
-          </div>
-          <div class="project-card-head">
-            <h3 data-i18n="proj.wp.title">WordPress Projects</h3>
-            <span class="project-award">
-              <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 4v10h16V8H4z" fill="currentColor"/></svg>
-              <span>CMS</span>
-            </span>
-          </div>
-          <p class="project-desc" data-i18n="proj.wp.desc">Websites built and managed with WordPress.</p>
-          <ul class="point-list">
-            <li><a class="inline-link" href="https://dev-ed-bl-portfolio.pantheonsite.io/" target="_blank" rel="noopener noreferrer" data-i18n="proj.wp.portfolio">Portfolio site</a></li>
-            <li><a class="inline-link" href="https://dev-ed-association.pantheonsite.io/" target="_blank" rel="noopener noreferrer" data-i18n="proj.wp.shop">Online shop (in progress)</a></li>
-          </ul>
-          <ul class="tag-list">
-            <li>WordPress</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- WRITING -->
-  <section class="section section-alt" id="writing">
-    <div class="container">
-      <p class="section-label reveal">06 - <span data-i18n="nav.writing">Writing</span></p>
-      <h2 class="section-heading reveal" data-i18n="writing.heading">Ideas worth writing down.</h2>
-      <p class="section-intro reveal" data-i18n="writing.intro">I write on Medium about technology and its human impact. More articles are on the way.</p>
-
-      <div class="article-grid">
-        <!-- To add an article: copy this whole <article> block, paste it above the first one (newest first),
+        <div class="article-grid">
+          <!-- To add an article: copy this whole <article> block, paste it above the first one (newest first),
              then change the title, date, link, description and tags. Add data-i18n only for text that
              has an EN/FR version in js/i18n.js. -->
-        <article class="project-card reveal">
-          <div class="card-media" data-photo-fallback>
-            <img src="assets/img/writing/violences-numeriques.jpg" alt="Article cover photo" loading="lazy">
-            <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="currentColor"/></svg></div>
-          </div>
-          <div class="project-card-head">
-            <h3>Quand les données personnelles deviennent des armes</h3>
-            <span class="project-award">
-              <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 4v10h14V8H5zm2 2h10v2H7v-2zm0 3h6v2H7v-2z" fill="currentColor"/></svg>
-              <span data-i18n="writing.a1.badge">Medium · Dec 2025 · In French</span>
+          <article class="project-card reveal">
+            <div class="card-media" data-photo-fallback>
+              <img src="assets/img/writing/violences-numeriques.jpg" alt="Article cover photo" loading="lazy">
+              <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                    fill="currentColor" />
+                </svg></div>
+            </div>
+            <div class="project-card-head">
+              <h3>Quand les données personnelles deviennent des armes</h3>
+              <span class="project-award">
+                <svg class="award-icon-sm" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                  <path
+                    d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 4v10h14V8H5zm2 2h10v2H7v-2zm0 3h6v2H7v-2z"
+                    fill="currentColor" />
+                </svg>
+                <span data-i18n="writing.a1.badge">Medium · Dec 2025 · In French</span>
+              </span>
+            </div>
+            <p class="project-desc" data-i18n="writing.a1.desc">Young women and online violence: how the personal data
+              collected by digital platforms opens the door to harassment, blackmail and identity theft in Africa, with
+              a focus on Togo, and why women's underrepresentation in tech design matters.</p>
+            <a class="project-link"
+              href="https://medium.com/@ededa.blssi/quand-les-donn%C3%A9es-personnelles-deviennent-des-armes-les-jeunes-femmes-face-aux-violences-num-be3776f45b2d"
+              target="_blank" rel="noopener noreferrer" data-i18n="writing.read">Read on Medium</a>
+            <ul class="tag-list">
+              <li data-i18n="writing.tag.privacy">Data privacy</li>
+              <li data-i18n="writing.tag.gender">Gender</li>
+              <li data-i18n="writing.tag.violence">Online violence</li>
+              <li>Togo</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="writing-cta reveal">
+          <a href="https://medium.com/@ededa.blssi" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"
+            data-i18n="writing.all">All articles on Medium</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section" id="awards">
+      <div class="container">
+        <p class="section-label reveal">07 - <span data-i18n="nav.awards">Awards</span></p>
+        <h2 class="section-heading reveal" data-i18n="awards.heading">Recognition along the way.</h2>
+
+        <div class="awards-grid">
+          <article class="award-card reveal">
+            <div class="card-media" data-photo-fallback>
+              <img src="assets/img/awards/jabarie.jpg" alt="JABARIE award photo" loading="lazy">
+              <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                    fill="currentColor" />
+                </svg></div>
+            </div>
+            <span class="award-icon" aria-hidden="true">
+              <svg class="icon-gold" viewBox="0 0 24 24" width="26" height="26">
+                <use href="#icon-medal" />
+              </svg>
             </span>
+            <h3 data-i18n="awards.jabarie.title">3rd Prize - JPOPE 2026</h3>
+            <p class="timeline-org" data-i18n="awards.jabarie.meta">JABARIE · 3D video game</p>
+            <p data-i18n="awards.jabarie.desc">Awarded for JABARIE, an Afro-futuristic 3D action-adventure game built in
+              Unity.</p>
+          </article>
+          <article class="award-card reveal">
+            <div class="card-media" data-photo-fallback>
+              <img src="assets/img/awards/ivan.jpg" alt="IVAN award photo" loading="lazy">
+              <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                    fill="currentColor" />
+                </svg></div>
+            </div>
+            <span class="award-icon" aria-hidden="true">
+              <svg class="icon-gold" viewBox="0 0 24 24" width="26" height="26">
+                <use href="#icon-medal" />
+              </svg>
+            </span>
+            <h3 data-i18n="awards.ivan.title">2nd Prize - JPOPE 2024</h3>
+            <p class="timeline-org" data-i18n="awards.ivan.meta">IVAN · AI chatbot</p>
+            <p data-i18n="awards.ivan.desc">Second prize for most innovative project at IPNET's Open Days, for IVAN, a
+              multi-platform AI chatbot.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <p class="section-label reveal">08 - <span data-i18n="nav.skills">Skills</span></p>
+        <h2 class="section-heading reveal" data-i18n="skills.heading">A broad technical base, sharpening toward Data
+          &amp; AI.</h2>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <span class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6z"
+                  fill="currentColor" />
+              </svg>
+            </span>
+            <h3 data-i18n="skills.dev">Software Development</h3>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Java</li>
+              <li>JavaScript (ES6+)</li>
+              <li>TypeScript</li>
+              <li>Dart</li>
+              <li data-i18n="skills.dev.oop">Object-Oriented Programming (OOP)</li>
+              <li data-i18n="skills.dev.webmobile">Web &amp; Mobile Application Development</li>
+              <li data-i18n="skills.dev.rest">REST APIs</li>
+              <li data-i18n="skills.dev.arch">Software Architecture</li>
+              <li>MVC</li>
+              <li>Clean Architecture</li>
+            </ul>
           </div>
-          <p class="project-desc" data-i18n="writing.a1.desc">Young women and online violence: how the personal data collected by digital platforms opens the door to harassment, blackmail and identity theft in Africa, with a focus on Togo, and why women's underrepresentation in tech design matters.</p>
-          <a class="project-link" href="https://medium.com/@ededa.blssi/quand-les-donn%C3%A9es-personnelles-deviennent-des-armes-les-jeunes-femmes-face-aux-violences-num-be3776f45b2d" target="_blank" rel="noopener noreferrer" data-i18n="writing.read">Read on Medium</a>
-          <ul class="tag-list">
-            <li data-i18n="writing.tag.privacy">Data privacy</li><li data-i18n="writing.tag.gender">Gender</li><li data-i18n="writing.tag.violence">Online violence</li><li>Togo</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="writing-cta reveal">
-        <a href="https://medium.com/@ededa.blssi" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="writing.all">All articles on Medium</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- AWARDS -->
-  <section class="section" id="awards">
-    <div class="container">
-      <p class="section-label reveal">07 - <span data-i18n="nav.awards">Awards</span></p>
-      <h2 class="section-heading reveal" data-i18n="awards.heading">Recognition along the way.</h2>
-
-      <div class="awards-grid">
-        <article class="award-card reveal">
-          <div class="card-media" data-photo-fallback>
-            <img src="assets/img/awards/jabarie.jpg" alt="JABARIE award photo" loading="lazy">
-            <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="currentColor"/></svg></div>
+          <div class="skill-group reveal">
+            <span class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path
+                  d="M12 2 2 7l10 5 10-5-10-5zm0 12.5L4.5 10.7 2 12l10 5 10-5-2.5-1.3L12 14.5zm0 4L4.5 14.7 2 16l10 5 10-5-2.5-1.3L12 18.5z"
+                  fill="currentColor" />
+              </svg>
+            </span>
+            <h3 data-i18n="skills.frameworks">Frameworks &amp; Technologies</h3>
+            <p class="skill-sub">Backend</p>
+            <ul class="tag-list">
+              <li>Node.js (Express)</li>
+              <li>Spring Boot</li>
+              <li>FastAPI</li>
+              <li>Django</li>
+            </ul>
+            <p class="skill-sub">Frontend</p>
+            <ul class="tag-list">
+              <li>React</li>
+              <li>Angular</li>
+              <li>Tailwind CSS</li>
+              <li>HTML / CSS</li>
+              <li>JavaScript / TypeScript</li>
+            </ul>
+            <p class="skill-sub">Mobile</p>
+            <ul class="tag-list">
+              <li>Flutter</li>
+            </ul>
+            <p class="skill-sub">CMS</p>
+            <ul class="tag-list">
+              <li>WordPress</li>
+            </ul>
+            <p class="skill-sub" data-i18n="skills.frameworks.games">Video Games</p>
+            <ul class="tag-list">
+              <li>Unity</li>
+              <li>C#</li>
+            </ul>
           </div>
-          <span class="award-icon" aria-hidden="true">
-            <svg class="icon-gold" viewBox="0 0 24 24" width="26" height="26"><use href="#icon-medal"/></svg>
-          </span>
-          <h3 data-i18n="awards.jabarie.title">3rd Prize - JPOPE 2026</h3>
-          <p class="timeline-org" data-i18n="awards.jabarie.meta">JABARIE · 3D video game</p>
-          <p data-i18n="awards.jabarie.desc">Awarded for JABARIE, an Afro-futuristic 3D action-adventure game built in Unity.</p>
-        </article>
-        <article class="award-card reveal">
-          <div class="card-media" data-photo-fallback>
-            <img src="assets/img/awards/ivan.jpg" alt="IVAN award photo" loading="lazy">
-            <div class="card-media-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v9.4l4.3-4.3a1 1 0 0 1 1.4 0L15 16l2.3-2.3a1 1 0 0 1 1.4 0L20 15V7H5zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="currentColor"/></svg></div>
+          <div class="skill-group reveal">
+            <span class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9 2h2v2h2V2h2v2h1a2 2 0 0 1 2 2v1h2v2h-2v2h2v2h-2v1a2 2 0 0 1-2 2v2h-2v-2h-2v2H9v-2H8a2 2 0 0 1-2-2v-1H4v-2h2v-2H4V8h2V7a2 2 0 0 1 2-2h1V3zm-1 4v10h10V6H8zm2 2h6v6H10V8z"
+                  fill="currentColor" />
+              </svg>
+            </span>
+            <h3 data-i18n="skills.ai">Data &amp; Artificial Intelligence</h3>
+            <ul class="tag-list">
+              <li data-i18n="skills.ai.analysis">Data Analysis &amp; Processing</li>
+              <li>Machine Learning &amp; Deep Learning</li>
+              <li>TensorFlow / Keras</li>
+              <li data-i18n="skills.ai.audio">Audio Data Processing</li>
+              <li data-i18n="skills.ai.mfcc">MFCC Feature Extraction</li>
+              <li data-i18n="skills.ai.models">AI Model Design &amp; Integration</li>
+              <li>NLP (CamemBERT)</li>
+              <li>LangChain / Ollama</li>
+            </ul>
           </div>
-          <span class="award-icon" aria-hidden="true">
-            <svg class="icon-gold" viewBox="0 0 24 24" width="26" height="26"><use href="#icon-medal"/></svg>
-          </span>
-          <h3 data-i18n="awards.ivan.title">2nd Prize - JPOPE 2024</h3>
-          <p class="timeline-org" data-i18n="awards.ivan.meta">IVAN · AI chatbot</p>
-          <p data-i18n="awards.ivan.desc">Second prize for most innovative project at IPNET's Open Days, for IVAN, a multi-platform AI chatbot.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section section-alt" id="skills">
-    <div class="container">
-      <p class="section-label reveal">08 - <span data-i18n="nav.skills">Skills</span></p>
-      <h2 class="section-heading reveal" data-i18n="skills.heading">A broad technical base, sharpening toward Data &amp; AI.</h2>
-
-      <div class="skills-grid">
-        <div class="skill-group reveal">
-          <span class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="skills.dev">Software Development</h3>
-          <ul class="tag-list">
-            <li>Python</li><li>Java</li><li>JavaScript (ES6+)</li><li>TypeScript</li><li>Dart</li><li data-i18n="skills.dev.oop">Object-Oriented Programming (OOP)</li><li data-i18n="skills.dev.webmobile">Web &amp; Mobile Application Development</li><li data-i18n="skills.dev.rest">REST APIs</li><li data-i18n="skills.dev.arch">Software Architecture</li><li>MVC</li><li>Clean Architecture</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <span class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 2 2 7l10 5 10-5-10-5zm0 12.5L4.5 10.7 2 12l10 5 10-5-2.5-1.3L12 14.5zm0 4L4.5 14.7 2 16l10 5 10-5-2.5-1.3L12 18.5z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="skills.frameworks">Frameworks &amp; Technologies</h3>
-          <p class="skill-sub">Backend</p>
-          <ul class="tag-list"><li>Node.js (Express)</li><li>Spring Boot</li><li>FastAPI</li><li>Django</li></ul>
-          <p class="skill-sub">Frontend</p>
-          <ul class="tag-list"><li>React</li><li>Angular</li><li>Tailwind CSS</li><li>HTML / CSS</li><li>JavaScript / TypeScript</li></ul>
-          <p class="skill-sub">Mobile</p>
-          <ul class="tag-list"><li>Flutter</li></ul>
-          <p class="skill-sub">CMS</p>
-          <ul class="tag-list"><li>WordPress</li></ul>
-          <p class="skill-sub" data-i18n="skills.frameworks.games">Video Games</p>
-          <ul class="tag-list"><li>Unity</li><li>C#</li></ul>
-        </div>
-        <div class="skill-group reveal">
-          <span class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 2h2v2h2V2h2v2h1a2 2 0 0 1 2 2v1h2v2h-2v2h2v2h-2v1a2 2 0 0 1-2 2v2h-2v-2h-2v2H9v-2H8a2 2 0 0 1-2-2v-1H4v-2h2v-2H4V8h2V7a2 2 0 0 1 2-2h1V3zm-1 4v10h10V6H8zm2 2h6v6H10V8z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="skills.ai">Data &amp; Artificial Intelligence</h3>
-          <ul class="tag-list">
-            <li data-i18n="skills.ai.analysis">Data Analysis &amp; Processing</li><li>Machine Learning &amp; Deep Learning</li><li>TensorFlow / Keras</li><li data-i18n="skills.ai.audio">Audio Data Processing</li><li data-i18n="skills.ai.mfcc">MFCC Feature Extraction</li><li data-i18n="skills.ai.models">AI Model Design &amp; Integration</li><li>NLP (CamemBERT)</li><li>LangChain / Ollama</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <span class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 4h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm0 9h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1zm2.5 2.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM6.5 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="skills.db">Databases</h3>
-          <ul class="tag-list">
-            <li>PostgreSQL</li><li>SQLite</li><li>MySQL</li><li>SQL</li><li data-i18n="skills.db.modeling">Database Modeling &amp; Manipulation</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <span class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M22.7 19 13.6 9.9c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1 .1-1.4z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="skills.tools">Tools &amp; DevOps</h3>
-          <ul class="tag-list">
-            <li>Git / GitHub</li><li>Docker</li><li>Render</li><li>Swagger / OpenAPI</li><li>Postman</li><li>VS Code</li><li>IntelliJ IDEA / Android Studio</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <span class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 9.2h3V19H5V9.2zM10.6 5h2.8v14h-2.8V5zm5.6 8H19v6h-2.8v-6z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="skills.data">Data &amp; Productivity</h3>
-          <ul class="tag-list">
-            <li>Microsoft Excel</li><li data-i18n="skills.data.viz">Data Analysis &amp; Visualization</li><li data-i18n="skills.data.pm">Project Management Fundamentals</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <span class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="skills.other">Other Domains</h3>
-          <ul class="tag-list">
-            <li data-i18n="skills.other.sec">Cybersecurity &amp; Data Protection</li><li data-i18n="skills.other.digital">Digital Transformation</li><li data-i18n="skills.other.sysarch">Systems Architecture</li><li data-i18n="skills.other.dist">Distributed Systems</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <span class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/></svg>
-          </span>
-          <h3 data-i18n="skills.soft">Professional Skills</h3>
-          <ul class="tag-list">
-            <li data-i18n="skills.soft.rigor">Organization &amp; rigor</li><li data-i18n="skills.soft.adapt">Adaptability &amp; teamwork</li><li data-i18n="skills.soft.lead">Leadership &amp; project management</li><li data-i18n="skills.soft.comm">Communication &amp; public speaking</li><li data-i18n="skills.soft.discretion">Discretion &amp; professionalism</li><li data-i18n="skills.soft.autonomy">Autonomy</li><li data-i18n="skills.soft.deadlines">Working to tight deadlines</li><li data-i18n="skills.soft.writing">Academic &amp; professional writing</li>
-          </ul>
+          <div class="skill-group reveal">
+            <span class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path
+                  d="M4 4h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm0 9h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1zm2.5 2.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM6.5 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+                  fill="currentColor" />
+              </svg>
+            </span>
+            <h3 data-i18n="skills.db">Databases</h3>
+            <ul class="tag-list">
+              <li>PostgreSQL</li>
+              <li>SQLite</li>
+              <li>MySQL</li>
+              <li>SQL</li>
+              <li data-i18n="skills.db.modeling">Database Modeling &amp; Manipulation</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <span class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path
+                  d="M22.7 19 13.6 9.9c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1 .1-1.4z"
+                  fill="currentColor" />
+              </svg>
+            </span>
+            <h3 data-i18n="skills.tools">Tools &amp; DevOps</h3>
+            <ul class="tag-list">
+              <li>Git / GitHub</li>
+              <li>Docker</li>
+              <li>Render</li>
+              <li>Swagger / OpenAPI</li>
+              <li>Postman</li>
+              <li>VS Code</li>
+              <li>IntelliJ IDEA / Android Studio</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <span class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path d="M5 9.2h3V19H5V9.2zM10.6 5h2.8v14h-2.8V5zm5.6 8H19v6h-2.8v-6z" fill="currentColor" />
+              </svg>
+            </span>
+            <h3 data-i18n="skills.data">Data &amp; Productivity</h3>
+            <ul class="tag-list">
+              <li>Microsoft Excel</li>
+              <li data-i18n="skills.data.viz">Data Analysis &amp; Visualization</li>
+              <li data-i18n="skills.data.pm">Project Management Fundamentals</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <span class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="currentColor" />
+              </svg>
+            </span>
+            <h3 data-i18n="skills.other">Other Domains</h3>
+            <ul class="tag-list">
+              <li data-i18n="skills.other.sec">Cybersecurity &amp; Data Protection</li>
+              <li data-i18n="skills.other.digital">Digital Transformation</li>
+              <li data-i18n="skills.other.sysarch">Systems Architecture</li>
+              <li data-i18n="skills.other.dist">Distributed Systems</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <span class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path
+                  d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                  fill="currentColor" />
+              </svg>
+            </span>
+            <h3 data-i18n="skills.soft">Professional Skills</h3>
+            <ul class="tag-list">
+              <li data-i18n="skills.soft.rigor">Organization &amp; rigor</li>
+              <li data-i18n="skills.soft.adapt">Adaptability &amp; teamwork</li>
+              <li data-i18n="skills.soft.lead">Leadership &amp; project management</li>
+              <li data-i18n="skills.soft.comm">Communication &amp; public speaking</li>
+              <li data-i18n="skills.soft.discretion">Discretion &amp; professionalism</li>
+              <li data-i18n="skills.soft.autonomy">Autonomy</li>
+              <li data-i18n="skills.soft.deadlines">Working to tight deadlines</li>
+              <li data-i18n="skills.soft.writing">Academic &amp; professional writing</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="container contact-inner">
-      <p class="section-label reveal">09 - <span data-i18n="nav.contact">Contact</span></p>
-      <h2 class="section-heading reveal" data-i18n="contact.heading">Let's build something.</h2>
-      <p class="contact-body reveal" data-i18n="contact.body">I'm open to internships, junior roles, and collaborations in software engineering, data, and AI. Feel free to reach out.</p>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact-inner">
+        <p class="section-label reveal">09 - <span data-i18n="nav.contact">Contact</span></p>
+        <h2 class="section-heading reveal" data-i18n="contact.heading">Let's build something.</h2>
+        <p class="contact-body reveal" data-i18n="contact.body">I'm open to internships, junior roles, and
+          collaborations in software engineering, data, and AI. Feel free to reach out.</p>
 
-      <div class="contact-links reveal">
-        <a href="mailto:ededa.blssi@gmail.com" class="contact-link">Email</a>
-        <a href="https://www.linkedin.com/in/ed%C3%A9da-bleoussi/" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/JDD3021" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://medium.com/@ededa.blssi" class="contact-link" target="_blank" rel="noopener noreferrer">Medium</a>
+        <div class="contact-links reveal">
+          <a href="mailto:ededa.blssi@gmail.com" class="contact-link">Email</a>
+          <a href="https://www.linkedin.com/in/ed%C3%A9da-bleoussi/" class="contact-link" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/JDD3021" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://medium.com/@ededa.blssi" class="contact-link" target="_blank"
+            rel="noopener noreferrer">Medium</a>
+        </div>
       </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Edéda Bleoussi. <span data-i18n="footer.built">Built and deployed with
+          GitHub Pages.</span></p>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>&copy; <span id="year">2026</span> Edéda Bleoussi. <span data-i18n="footer.built">Built and deployed with GitHub Pages.</span></p>
-  </div>
-</footer>
-
-<script src="js/i18n.js?v=9"></script>
-<script src="js/main.js?v=8"></script>
+  <script src="js/i18n.js?v=9"></script>
+  <script src="js/main.js?v=8"></script>
 </body>
+
 </html>
