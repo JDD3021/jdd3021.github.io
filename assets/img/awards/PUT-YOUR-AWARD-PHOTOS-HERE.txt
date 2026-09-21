@@ -2,6 +2,8 @@ The award cards on the site look for images at these exact paths:
 
     assets/img/awards/jabarie.jpg
     assets/img/awards/ivan.jpg
+    assets/img/awards/dedie.jpg
+    assets/img/awards/genietech.jpg
 
 Add a photo for each award (e.g. from the ceremony, or the project itself)
 with exactly that file name and it will appear automatically above the

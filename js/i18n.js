@@ -295,6 +295,18 @@ window.I18N = {
     en: "Second prize for most innovative project at IPNET's Open Days, for IVAN, a multi-platform AI chatbot.",
     fr: "2e prix du projet le plus innovant aux Journées Portes Ouvertes d'IPNET, pour IVAN, un chatbot IA multiplateforme."
   },
+  "awards.dedie.title": { en: "3rd Prize - ANAC Togo Symposium 2025", fr: "3e Prix - Symposium ANAC Togo 2025" },
+  "awards.dedie.meta": { en: "DEDIE · Aviation safety app", fr: "DEDIE · Application de sécurité aéronautique" },
+  "awards.dedie.desc": {
+    en: "Third prize with Vortex Aura, an all-girls team, for DEDIE, an app to report and manage aviation security incidents, built during a national hackathon organized by Togo's Civil Aviation Authority (ANAC).",
+    fr: "3e prix avec Vortex Aura, une équipe entièrement féminine, pour DEDIE, une application de signalement et de gestion des incidents de sécurité aéronautique, développée lors d'un hackathon national organisé par l'Agence Nationale de l'Aviation Civile du Togo (ANAC)."
+  },
+  "awards.genietech.title": { en: "1st Prize - Génie Tech 2025", fr: "1er Prix - Génie Tech 2025" },
+  "awards.genietech.meta": { en: "IPNET Institute of Technology · Inter-school science & tech contest", fr: "IPNET Institute of Technology · Concours scientifique et technologique inter-écoles" },
+  "awards.genietech.desc": {
+    en: "First prize with the IPNET Institute of Technology team at the Génie Tech 2025 final against ESAG-NDE, organized by IDS Technologie for its 30th anniversary.",
+    fr: "1er prix avec l'équipe d'IPNET Institute of Technology à la finale de Génie Tech 2025 face à ESAG-NDE, organisée par IDS Technologie pour ses 30 ans."
+  },
 
   "education.heading": { en: "Foundations.", fr: "Parcours académique." },
   "education.degree": {
