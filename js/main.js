@@ -62,15 +62,22 @@
     });
   });
 
-  // Sticky header shadow on scroll
+  // Sticky header shadow on scroll + reading-progress bar
+  var scrollProgress = document.getElementById("scroll-progress");
   function onScroll() {
     if (window.scrollY > 8) {
       header.classList.add("is-scrolled");
     } else {
       header.classList.remove("is-scrolled");
     }
+    if (scrollProgress) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0;
+      scrollProgress.style.width = pct + "%";
+    }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
   onScroll();
 
   // Mobile menu toggle
@@ -286,9 +293,12 @@
     applyLang("en");
   }
 
-  // Image lightbox: any <img data-full="..."> opens its full-size version
-  var zoomables = Array.prototype.slice.call(document.querySelectorAll("img[data-full]"));
-  if (zoomables.length) {
+  // Image lightbox: every photo in <main> opens full screen once it has loaded
+  // (images that 404 keep their placeholder and are skipped). An
+  // <img data-full="..."> opens that larger version instead of its own file.
+  var ZOOM_SELECTOR = "main img";
+  var zoomables = [];
+  if (document.querySelector(ZOOM_SELECTOR)) {
     var LB_LABELS = {
       en: { close: "Close", prev: "Previous photo", next: "Next photo", open: "Enlarge photo" },
       fr: { close: "Fermer", prev: "Photo précédente", next: "Photo suivante", open: "Agrandir la photo" }
@@ -313,11 +323,6 @@
     var lbIndex = 0;
     var lbLastFocus = null;
 
-    if (zoomables.length < 2) {
-      lbPrev.hidden = true;
-      lbNext.hidden = true;
-    }
-
     function lbLabels() {
       return LB_LABELS[currentLang] || LB_LABELS.en;
     }
@@ -325,7 +330,7 @@
     function lbShow(index) {
       lbIndex = (index + zoomables.length) % zoomables.length;
       var source = zoomables[lbIndex];
-      lbImg.src = source.getAttribute("data-full");
+      lbImg.src = source.getAttribute("data-full") || source.currentSrc || source.src;
       lbImg.alt = source.alt;
       lbCaption.textContent = source.alt;
       var labels = lbLabels();
@@ -335,9 +340,12 @@
       lightbox.setAttribute("aria-label", source.alt);
     }
 
-    function lbOpen(index) {
+    function lbOpen(img) {
       lbLastFocus = document.activeElement;
-      lbShow(index);
+      // Rebuilt on every open: images finish loading at different times
+      zoomables = Array.prototype.slice.call(document.querySelectorAll(ZOOM_SELECTOR + ".is-zoomable"));
+      lbPrev.hidden = lbNext.hidden = zoomables.length < 2;
+      lbShow(zoomables.indexOf(img));
       lightbox.hidden = false;
       document.body.classList.add("lightbox-open");
       requestAnimationFrame(function () { lightbox.classList.add("is-open"); });
@@ -354,16 +362,26 @@
       }
     }
 
-    zoomables.forEach(function (img, i) {
+    function markZoomable(img) {
+      if (img.classList.contains("is-zoomable")) return;
+      img.classList.add("is-zoomable");
       img.setAttribute("tabindex", "0");
       img.setAttribute("role", "button");
-      img.addEventListener("click", function () { lbOpen(i); });
+      img.addEventListener("click", function () { lbOpen(img); });
       img.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          lbOpen(i);
+          lbOpen(img);
         }
       });
+    }
+
+    document.querySelectorAll(ZOOM_SELECTOR).forEach(function (img) {
+      if (img.complete && img.naturalWidth > 0) {
+        markZoomable(img);
+        return;
+      }
+      img.addEventListener("load", function () { markZoomable(img); });
     });
 
     lbClose.addEventListener("click", lbHide);
@@ -399,5 +417,46 @@
         }
       }
     });
+  }
+
+  // Micro-interactions below are purely decorative, so they stay off for
+  // touch devices (no hover to drive them) and for reduced-motion visitors.
+  var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Magnetic pull on the hero's call-to-action buttons: they lean slightly
+  // toward the cursor, then spring back on mouseleave.
+  if (finePointer && !reducedMotion) {
+    document.querySelectorAll(".hero-cta .btn").forEach(function (btn) {
+      btn.addEventListener("mousemove", function (e) {
+        var r = btn.getBoundingClientRect();
+        var x = (e.clientX - r.left - r.width / 2) * 0.18;
+        var y = (e.clientY - r.top - r.height / 2) * 0.18 - 2;
+        btn.style.transform = "translate(" + x.toFixed(1) + "px, " + y.toFixed(1) + "px)";
+      });
+      btn.addEventListener("mouseleave", function () {
+        btn.style.transform = "";
+      });
+    });
+  }
+
+  // Gentle parallax drift on the hero photo as the page scrolls.
+  var heroPhoto = document.querySelector(".hero-photo");
+  if (heroPhoto && !reducedMotion) {
+    var parallaxTicking = false;
+    function updateParallax() {
+      parallaxTicking = false;
+      var rect = heroPhoto.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      var offset = Math.max(-24, Math.min(24, window.scrollY * 0.1));
+      heroPhoto.style.transform = "translateY(" + offset.toFixed(1) + "px)";
+    }
+    window.addEventListener("scroll", function () {
+      if (!parallaxTicking) {
+        parallaxTicking = true;
+        window.requestAnimationFrame(updateParallax);
+      }
+    }, { passive: true });
+    updateParallax();
   }
 })();

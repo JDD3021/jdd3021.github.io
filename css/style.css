@@ -134,6 +134,15 @@ html {
   background: var(--color-bg);
   scrollbar-color: var(--scrollbar) transparent;
 }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--color-bg);
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); background-clip: padding-box; }
 body {
   margin: 0;
   color: var(--color-text);
@@ -188,10 +197,23 @@ button { font-family: inherit; cursor: pointer; }
 /* ==========================================================================
    Reveal-on-scroll
    ========================================================================== */
+/* Reveal is an animation, not a transition: components define their own
+   `transition` for hover, which used to swallow the fade-in. The delay comes
+   from the element's position among its siblings (staggered entrance). */
 .reveal {
   opacity: 0;
   transform: translateY(14px);
-  transition: opacity 600ms ease, transform 600ms ease;
+}
+.reveal.is-visible {
+  animation: reveal-up 750ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) backwards;
+}
+.reveal:nth-child(2) { --reveal-delay: 80ms; }
+.reveal:nth-child(3) { --reveal-delay: 160ms; }
+.reveal:nth-child(4) { --reveal-delay: 240ms; }
+.reveal:nth-child(n + 5) { --reveal-delay: 320ms; }
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(28px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 .reveal.is-visible {
   opacity: 1;
@@ -236,10 +258,56 @@ button { font-family: inherit; cursor: pointer; }
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 300ms ease;
+  transition: opacity 300ms ease, transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .card-media img.is-loaded { opacity: 1; }
 .card-media img.is-loaded ~ .card-media-placeholder { display: none; }
+/* Hovering anywhere on the card previews the photo, not just the photo itself */
+.card-media:hover img.is-loaded,
+.project-card:hover .card-media img.is-loaded,
+.award-card:hover .card-media img.is-loaded {
+  transform: scale(1.06);
+}
+/* Darkening scrim + expand badge, so hover signals the photo opens larger */
+.card-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, transparent 55%, rgba(15, 10, 20, 0.45) 100%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+.card-media:hover::before,
+.project-card:hover .card-media::before,
+.award-card:hover .card-media::before {
+  opacity: 1;
+}
+.card-media::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='15' height='15'%3E%3Cpath d='M9 5H5v4M15 5h4v4M9 19H5v-4M15 19h4v-4' fill='none' stroke='%232B1B34' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity var(--transition), transform var(--transition);
+  pointer-events: none;
+}
+.card-media:hover::after,
+.project-card:hover .card-media::after,
+.award-card:hover .card-media::after {
+  opacity: 1;
+  transform: scale(1);
+}
 .card-media-placeholder {
   position: absolute;
   inset: 0;
@@ -256,6 +324,7 @@ button { font-family: inherit; cursor: pointer; }
    Header
    ========================================================================== */
 .site-header {
+  --header-h: 72px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -273,16 +342,27 @@ button { font-family: inherit; cursor: pointer; }
   backdrop-filter: var(--glass-blur);
 }
 .site-header.is-scrolled {
+  --header-h: 60px;
   border-bottom-color: var(--color-border);
   box-shadow: var(--header-shadow);
+}
+.scroll-progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--violet), var(--butter));
+  z-index: 1;
 }
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1240px;
-  height: 72px;
+  height: var(--header-h);
   gap: 24px;
+  transition: height 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .logo {
   font-family: var(--font-serif);
@@ -316,8 +396,9 @@ button { font-family: inherit; cursor: pointer; }
   font-weight: 500;
   color: var(--color-text-muted);
   white-space: nowrap;
-  transition: color var(--transition), background var(--transition);
+  transition: color var(--transition), background var(--transition), transform 150ms ease;
 }
+.nav-list a:active, .nav-group-toggle:active { transform: scale(0.95); }
 .nav-list a:hover,
 .nav-group-toggle:hover,
 .nav-group.is-open > .nav-group-toggle {
@@ -398,7 +479,8 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--color-text);
   transition: background var(--transition), color var(--transition), transform var(--transition);
 }
-.icon-link:hover { background: var(--color-accent-soft); color: var(--color-accent); transform: translateY(-1px); }
+.icon-link:hover { background: var(--color-accent-soft); color: var(--color-accent); transform: translateY(-1px) scale(1.06); }
+.icon-link:active { transform: scale(0.92); }
 
 .mobile-social {
   display: none;
@@ -417,9 +499,10 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: 0.04em;
   padding: 6px 12px;
   border-radius: var(--radius-pill);
-  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  transition: border-color var(--transition), color var(--transition), background var(--transition), transform 150ms ease;
 }
 .lang-toggle:hover { border-color: var(--color-accent-line); color: var(--color-accent); background: var(--color-accent-soft); }
+.lang-toggle:active, .theme-toggle:active { transform: scale(0.9); }
 
 .theme-toggle {
   display: inline-flex;
@@ -435,9 +518,16 @@ button { font-family: inherit; cursor: pointer; }
   transition: border-color var(--transition), color var(--transition), background var(--transition), transform var(--transition);
 }
 .theme-toggle:hover { border-color: var(--color-accent-line); color: var(--color-accent); background: var(--color-accent-soft); transform: rotate(12deg); }
-.theme-toggle .icon-sun { display: none; }
-:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+.theme-toggle { position: relative; overflow: hidden; }
+.theme-toggle svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  transition: transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 250ms ease;
+}
+.theme-toggle .icon-sun { opacity: 0; transform: rotate(-90deg) scale(0.4); }
+:root[data-theme="dark"] .theme-toggle .icon-sun { opacity: 1; transform: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { opacity: 0; transform: rotate(90deg) scale(0.4); }
 .lang-toggle:focus-visible, .theme-toggle:focus-visible, .menu-toggle:focus-visible {
   outline: 2px solid var(--color-accent-text);
   outline-offset: 3px;
@@ -586,6 +676,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -594,9 +685,25 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition), filter var(--transition);
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition), filter var(--transition);
   border: 1px solid transparent;
 }
+/* Diagonal sheen that sweeps across on hover */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.4) 52%, transparent 70%);
+  background-size: 250% 100%;
+  background-position: 120% 0;
+  transition: background-position 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.btn:hover::after { background-position: -20% 0; }
+.btn:active { transform: scale(0.96); transition-duration: 120ms; }
 .btn-primary {
   background: var(--btn-primary-bg);
   color: var(--color-accent-text);
@@ -799,6 +906,24 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--chip-bg);
   border: 1px solid var(--chip-border);
   color: var(--color-text);
+  transition: transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1), background var(--transition), border-color var(--transition);
+}
+/* Chips give a tiny staggered pop when their card is hovered */
+.project-card:hover .tag-list li,
+.skill-group:hover .tag-list li,
+.award-card:hover .tag-list li {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent-line);
+}
+.tag-list li:nth-child(1) { transition-delay: 0ms; }
+.tag-list li:nth-child(2) { transition-delay: 30ms; }
+.tag-list li:nth-child(3) { transition-delay: 60ms; }
+.tag-list li:nth-child(4) { transition-delay: 90ms; }
+.tag-list li:nth-child(n + 5) { transition-delay: 120ms; }
+.project-card:hover .tag-list li,
+.skill-group:hover .tag-list li,
+.award-card:hover .tag-list li {
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -851,6 +976,9 @@ button { font-family: inherit; cursor: pointer; }
 .project-card-wide { grid-column: 1 / -1; }
 .project-link,
 .inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   color: var(--color-accent-text);
   font-weight: 600;
   text-decoration: underline;
@@ -858,8 +986,16 @@ button { font-family: inherit; cursor: pointer; }
   text-underline-offset: 3px;
   transition: text-decoration-color var(--transition);
 }
+.project-link::after,
+.inline-link::after {
+  content: "\2192";
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
 .project-link { align-self: flex-start; font-size: 14px; }
 .project-link:hover, .inline-link:hover { text-decoration-color: var(--color-accent-text); }
+.project-link:hover::after, .inline-link:hover::after { transform: translateX(4px); }
 
 /* ==========================================================================
    Skills
@@ -889,7 +1025,9 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid var(--color-accent-line);
   color: var(--color-accent);
   margin-bottom: 18px;
+  transition: transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1), background var(--transition);
 }
+.skill-group:hover .skill-icon { transform: rotate(-8deg) scale(1.08); background: var(--color-accent-line); }
 .skill-group h3 {
   font-size: 1.05rem;
   margin-bottom: 16px;
@@ -932,7 +1070,9 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid var(--color-accent-line);
   color: var(--color-accent);
   margin-bottom: 14px;
+  transition: transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+.award-card:hover .award-icon { transform: rotate(-8deg) scale(1.08); }
 .award-card h3 {
   font-size: 1.1rem;
   margin-bottom: 4px;
@@ -1002,6 +1142,7 @@ button { font-family: inherit; cursor: pointer; }
   box-shadow: 0 10px 30px rgba(212, 164, 224, 0.2);
   transform: translateY(-2px);
 }
+.contact-link:active { transform: translateY(0) scale(0.97); }
 
 /* ==========================================================================
    Footer
@@ -1022,11 +1163,13 @@ button { font-family: inherit; cursor: pointer; }
 /* ==========================================================================
    Image lightbox
    ========================================================================== */
-img[data-full] { cursor: zoom-in; }
-img[data-full]:focus-visible {
+img.is-zoomable { cursor: zoom-in; }
+img.is-zoomable:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 4px;
 }
+/* card photos sit inside an overflow:hidden frame, so the ring goes inside */
+.card-media img.is-zoomable:focus-visible { outline-offset: -3px; }
 body.lightbox-open { overflow: hidden; }
 .lightbox {
   position: fixed;
@@ -1104,11 +1247,11 @@ body.lightbox-open { overflow: hidden; }
 @media (max-width: 1100px) {
   .main-nav {
     position: fixed;
-    top: 72px;
+    top: var(--header-h);
     left: 0;
     width: 100%;
-    height: calc(100vh - 72px);
-    height: calc(100dvh - 72px);
+    height: calc(100vh - var(--header-h));
+    height: calc(100dvh - var(--header-h));
     background: var(--nav-bg);
     -webkit-backdrop-filter: blur(24px) saturate(140%);
     backdrop-filter: blur(24px) saturate(140%);
@@ -1116,7 +1259,7 @@ body.lightbox-open { overflow: hidden; }
     transform: translateY(-8px);
     opacity: 0;
     visibility: hidden;
-    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition), top 300ms cubic-bezier(0.22, 1, 0.36, 1), height 300ms cubic-bezier(0.22, 1, 0.36, 1);
     overflow-y: auto;
   }
   .main-nav.is-open {
@@ -1208,16 +1351,12 @@ body.lightbox-open { overflow: hidden; }
   .profile-photo { width: 150px; height: 150px; }
   .profile-photo-placeholder { font-size: 2.1rem; }
   .hero-photo::after { width: 24px; height: 24px; }
-  .header-inner { height: 64px; }
+  .site-header { --header-h: 64px; }
+  .site-header.is-scrolled { --header-h: 56px; }
   .header-actions { gap: 8px; }
   .header-cta { display: none; }
   .icon-link { width: 30px; height: 30px; }
   .btn { padding: 12px 20px; font-size: 13.5px; }
-  .main-nav {
-    top: 64px;
-    height: calc(100vh - 64px);
-    height: calc(100dvh - 64px);
-  }
 }
 
 /* ==========================================================================
