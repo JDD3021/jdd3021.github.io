@@ -5,9 +5,9 @@
   "use strict";
 
   // ---- Fill these in after creating your EmailJS account (see EMAILJS-SETUP.txt) ----
-  var EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-  var EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-  var EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+  var EMAILJS_PUBLIC_KEY = "LdJfcpYHIVMbAXfS6";
+  var EMAILJS_SERVICE_ID = "service_iq612ea";
+  var EMAILJS_TEMPLATE_ID = "template_191wlq5";
   // --------------------------------------------------------------------------------
 
   if (EMAILJS_PUBLIC_KEY.indexOf("YOUR_") === 0 || typeof emailjs === "undefined") return;
