@@ -34,16 +34,12 @@ window.I18N = {
     fr: "Une ingénieure logicielle qui approfondit la data & l'IA."
   },
   "about.p1": {
-    en: "I'm a third-year software engineering student with an initial background in mathematics, progressively specializing in artificial intelligence, data analysis, and software development. I design data-driven digital solutions that combine technical rigor, critical thinking, and social impact.",
-    fr: "Je suis étudiante en troisième année de licence en génie logiciel, avec une formation initiale en mathématiques et une spécialisation progressive en intelligence artificielle, analyse de données et développement logiciel. Je conçois des solutions numériques centrées sur les données, alliant rigueur technique, pensée critique et impact social."
+    en: "Third-year software engineering student with a mathematics background, specializing in AI, data analysis, and full-stack development. Across internships and projects I've worked the whole pipeline - cleaning and analyzing data, building APIs, integrating ML models, and designing web and mobile interfaces.",
+    fr: "Étudiante en troisième année de génie logiciel, formation initiale en mathématiques, spécialisée en IA, analyse de données et développement full-stack. Au fil de mes stages et projets, j'ai couvert toute la chaîne : nettoyage et analyse de données, développement d'API, intégration de modèles de ML, conception d'interfaces web et mobile."
   },
   "about.p2": {
-    en: "Across my internships and projects, I've worked through the full stack: cleaning and analyzing data, building APIs, integrating machine learning models, and designing interfaces for web and mobile. I'm particularly interested in digital security, gender, and responsible technology in Africa - and I'm equally at ease on the technical and communication sides, with active involvement in student leadership, tech popularization, and data storytelling.",
-    fr: "Au fil de mes stages et projets, j'ai travaillé sur l'ensemble de la chaîne technique : nettoyage et analyse de données, développement d'API, intégration de modèles de machine learning, et conception d'interfaces web et mobile. J'ai un intérêt particulier pour la sécurité numérique, le genre et les technologies responsables en Afrique, et je suis à l'aise aussi bien sur les aspects techniques que communicationnels, avec un engagement actif dans le leadership étudiant, la vulgarisation technologique et le data storytelling."
-  },
-  "about.p3": {
-    en: "I'm currently based in Lomé, Togo, and open to opportunities that let me contribute to teams solving problems that matter - in Togo or internationally.",
-    fr: "Je suis actuellement basée à Lomé, au Togo, et ouverte à des opportunités me permettant de contribuer à des équipes qui résolvent des problèmes qui comptent, au Togo comme à l'international."
+    en: "I care about digital security, gender, and responsible technology in Africa, and I'm just as comfortable on the communication side - student leadership, tech popularization, data storytelling. Based in Lomé, Togo, and open to opportunities to work on problems that matter, locally or internationally.",
+    fr: "Je m'intéresse à la sécurité numérique, au genre et aux technologies responsables en Afrique, et je suis tout aussi à l'aise côté communication : leadership étudiant, vulgarisation technologique, data storytelling. Basée à Lomé, au Togo, ouverte aux opportunités qui comptent, au Togo comme à l'international."
   },
 
   "exp.heading": { en: "Where I've applied what I know.", fr: "Là où j'ai mis mes compétences en pratique." },
@@ -233,6 +229,10 @@ window.I18N = {
   "skills.heading": {
     en: "A broad technical base, sharpening toward Data & AI.",
     fr: "Une base technique large, qui s'affine vers la Data & l'IA."
+  },
+  "skills.intro": {
+    en: "Core: software engineering, data and AI. Backed by web, mobile and game-dev tooling picked up along the way.",
+    fr: "Cœur de compétences : génie logiciel, data et IA. Complété par des outils web, mobile et game-dev acquis en chemin."
   },
   "skills.dev": { en: "Software Development", fr: "Développement logiciel" },
   "skills.dev.oop": { en: "Object-Oriented Programming (OOP)", fr: "Programmation orientée objet (POO)" },
