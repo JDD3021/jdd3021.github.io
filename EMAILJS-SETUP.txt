@@ -1,0 +1,78 @@
+How to activate "email me on every visit" for the CV site
+============================================================
+
+The site is now wired to send you an email (via EmailJS) each time someone
+visits jdd3021.github.io - but it needs your own EmailJS account to work.
+Nothing is sent until you fill in the three values below.
+
+STEP 1 - Create a free EmailJS account
+    Go to https://www.emailjs.com/ and sign up with ededa.blssi@gmail.com.
+
+STEP 2 - Connect your email
+    In the EmailJS dashboard: "Email Services" -> "Add New Service" ->
+    choose Gmail -> connect ededa.blssi@gmail.com.
+    Note the Service ID it gives you (looks like "service_xxxxxxx").
+
+STEP 3 - Create an email template
+    "Email Templates" -> "Create New Template".
+    Set "To Email" to ededa.blssi@gmail.com.
+    In the subject/body, use these variables (they're filled in automatically
+    for every visit):
+
+        {{visit_time}}   - when the visit happened (Togo time)
+        {{page_url}}      - which page was opened
+        {{referrer}}      - where the visitor came from (site/link)
+        {{user_agent}}    - browser and device info
+        {{language}}      - visitor's browser language
+        {{screen_size}}   - visitor's screen resolution
+        {{city}}          - approximate city (from IP)
+        {{region}}        - approximate region (from IP)
+        {{country}}       - approximate country (from IP)
+        {{ip}}            - visitor's IP address
+
+    Example subject: "New CV visit from {{city}}, {{country}}"
+    Example body:
+        A visitor just opened your CV.
+
+        When: {{visit_time}}
+        Location: {{city}}, {{region}}, {{country}} (IP: {{ip}})
+        Came from: {{referrer}}
+        Page: {{page_url}}
+        Device: {{user_agent}} ({{screen_size}}, {{language}})
+
+    Note the Template ID (looks like "template_xxxxxxx").
+
+STEP 4 - Get your Public Key
+    "Account" -> "General" -> copy the "Public Key".
+
+STEP 5 - Fill in js/visitor-alert.js
+    Open js/visitor-alert.js and replace these three lines near the top:
+
+        var EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+        var EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+        var EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+
+    with the values from steps 2-4, then commit and push (or send me the
+    three values and I'll fill them in and publish for you).
+
+STEP 6 - Stop getting alerted on your own visits
+    Once it's live, open the site once with ?owner=1 added to the link:
+
+        https://jdd3021.github.io/?owner=1
+
+    That marks your own browser as "the owner" (stored locally on your
+    device only) so your own visits won't trigger an email. Do this on
+    every device/browser you personally use to check the site.
+
+Good to know
+    - Free EmailJS plan: 200 emails/month. If the CV gets shared a lot,
+      you may hit that limit and need to upgrade or switch back to just
+      checking GoatCounter.
+    - Static sites get a lot of traffic from search engine crawlers and
+      link-preview bots (Google, LinkedIn, WhatsApp, etc). The script
+      filters out the most common ones, but you will likely still get a
+      few emails that aren't real visitors.
+    - The location (city/country) comes from a free IP lookup service
+      (ipapi.co) and is approximate, not exact.
+
+You can delete this text file once everything is set up.
