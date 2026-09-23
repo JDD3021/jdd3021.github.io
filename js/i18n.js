@@ -64,22 +64,6 @@ window.I18N = {
     fr: "Rapprochements périodiques sur trois sources et automatisation de requêtes PostgreSQL récurrentes avec Python."
   },
 
-  "exp.menumap.date": { en: "Startup Project", fr: "Projet startup" },
-  "exp.menumap.role": { en: "CTO", fr: "CTO" },
-  "exp.menumap.place": { en: "Startup project", fr: "Projet startup" },
-  "exp.menumap.body": {
-    en: "Led the technical direction of MenuMap, a startup project, from concept to a working prototype.",
-    fr: "Direction technique de MenuMap, un projet startup, de l'idée jusqu'à un prototype fonctionnel."
-  },
-  "exp.menumap.p1": {
-    en: "Defined the technical direction of the product.",
-    fr: "Définition de la direction technique du produit."
-  },
-  "exp.menumap.p2": {
-    en: "Developed it hands-on through to a working prototype.",
-    fr: "Développement concret jusqu'à un prototype fonctionnel."
-  },
-
   "exp.thesymo.date": { en: "Aug - Oct 2025", fr: "Août - Oct. 2025" },
   "exp.thesymo.role": { en: "Software Development Intern", fr: "Stagiaire en Développement Logiciel" },
   "exp.thesymo.place": { en: "Lomé, Togo", fr: "Lomé, Togo" },
